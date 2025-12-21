@@ -1,0 +1,126 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgb(11 15 26);
+  backdrop-filter: blur(12px);
+}
+
+.navbar-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 18px 5%;
+  padding-left: 2%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.navbar-logo img {
+  height: 36px;
+}
+
+/* LINKS */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+/* NORMAL LINK */
+.navbar-links a,
+.nav-item span {
+  color: #e5e7eb;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* NAV ITEM */
+.nav-item {
+  position: relative;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: absolute;
+  top: 38px;
+  left: 0;
+
+  min-width: 200px;
+  background: #020617;
+  border-radius: 14px;
+  padding: 12px 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  transition: all 0.25s ease;
+}
+
+/* DROPDOWN LINKS */
+.dropdown a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+.dropdown a:hover {
+  background: rgba(255,255,255,0.05);
+  color: #ffffff;
+}
+
+/* DESKTOP HOVER */
+@media (hover: hover) {
+  .nav-item:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE CLICK */
+.nav-item.open .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* CTA */
+.cta-button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  color: #fff;
+
+  padding: 15px 25px;
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 16px 40px rgba(37, 99, 235, 0.6),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+.cta-arrow {
+  font-size: 18px;
+}
+.cta-button:hover .cta-arrow {
+  transform: translate(3px, -3px);
+}

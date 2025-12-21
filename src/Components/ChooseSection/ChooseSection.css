@@ -1,0 +1,247 @@
+.choose-section {
+  background: #f6f8fb;
+  padding: 120px 0;
+}
+
+/* INTRO */
+.choose-intro {
+  max-width: 900px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+
+.choose-pill {
+  padding: 6px 14px;
+  background: #1f2937;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.choose-intro h2 {
+  font-size: 46px;
+  font-weight: 700;
+  color: #111827;
+  margin: 20px 0;
+}
+
+.choose-intro p {
+  font-size: 17px;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+/* STACK AREA → NORMAL FLOW */
+.stack-area {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* CARD */
+.stack-card {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  border-radius: 28px;
+  background: linear-gradient(
+    135deg,
+    #eefcf7 0%,
+    #eef1ff 100%
+  );
+
+  box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+}
+
+/* INNER */
+.stack-card-inner {
+  padding: 80px 60px ;
+}
+
+/* CARD 1 HEADING */
+.stack-card h3 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+/* LAB GRID */
+.labs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+
+.lab-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 26px 26px 28px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+}
+
+/* IMAGE */
+.lab-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 22px;
+}
+
+/* TITLE */
+.lab-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+/* DESCRIPTION */
+.lab-card p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* BUTTON */
+.lab-card button {
+  margin-top: auto;
+  width: 100%;
+
+  background: #ffffff;
+  border: 1.5px solid #111827;
+  color: #111827;
+
+  padding: 14px 0;
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  transition: all 0.25s ease;
+}
+
+.lab-card button:hover {
+  background: #111827;
+  color: #ffffff;
+}
+
+/* CARD 2 */
+.card-2 {
+  background: #f0f9ff;
+}
+
+.card-2-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.card-2-media img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card-2-text h3 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.card-2-text p {
+  font-size: 16.5px;
+  line-height: 1.7;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.outline-btn {
+  border: 1.5px solid #555;
+  background: transparent;
+  color: #427af3;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* CARD 4 */
+.card-4 {
+  background: linear-gradient(
+    135deg,
+    #ecfeff 0%,
+    #fefce8 100%
+  );
+}
+
+/* ICON GRID */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* ICON CARD */
+.icon-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 44px 34px;
+
+  text-align: center;
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 14px 40px rgba(0,0,0,0.05);
+}
+
+/* ICON CIRCLE */
+.icon-circle {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eff6ff;
+  border-radius: 50%;
+
+  color: #2563eb;
+  font-size: 30px;
+}
+.icon-circle svg{
+  width: 40px;
+  height: 40px;
+}
+
+/* TITLE */
+.icon-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+/* DESC */
+.icon-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #6b7280;
+}

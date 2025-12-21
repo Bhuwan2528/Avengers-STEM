@@ -1,0 +1,131 @@
+.impact-section {
+  position: relative;
+  background: radial-gradient(
+    circle at center,
+    #0b1a2d 0%,
+    #05070d 65%,
+    #000 100%
+  );
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+/* CONCENTRIC / RADAR CIRCLES */
+.impact-circles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at center,
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px
+    );
+  background-size: 260px 260px;
+  opacity: 0.7;
+}
+
+.impact-circles::before,
+.impact-circles::after {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  background:
+    radial-gradient(circle at center,
+      transparent 62%,
+      rgba(255,255,255,0.05) 63%,
+      transparent 64%
+    );
+}
+
+.impact-circles::after {
+  inset: -45%;
+  opacity: 0.6;
+}
+
+/* CONTENT WRAPPER */
+.impact-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* PARTNERS */
+.partners-title {
+  color: #eaeaea;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 48px;
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  margin-bottom: 70px;
+}
+
+.partners-logos img {
+  height: 70px;
+  opacity: 0.9;
+}
+
+/* IMPACT TITLE */
+.impact-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+/* IMPACT GRID */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 70px;
+}
+
+.impact-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 35px 18px;
+}
+
+.impact-card h3 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.impact-card p {
+  color: #b5b9c6;
+  font-size: 15px;
+}
+
+/* CTA BUTTON */
+.impact-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #ffffff;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.impact-btn:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-2px);
+}

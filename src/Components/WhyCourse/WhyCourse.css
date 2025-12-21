@@ -1,0 +1,96 @@
+.why-course {
+  position: relative;
+  background: #f6f8fb;
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Content */
+.why-course-content {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Pill */
+.why-course-pill {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #0f1c2e;
+  color: #ffffff;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-bottom: 28px;
+}
+
+/* Title */
+.why-course-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #0f172a;
+  margin-bottom: 28px;
+}
+
+.why-course-title span {
+  color: #1e293b;
+}
+
+/* Description */
+.why-course-desc {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #475569;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Images */
+.why-course-image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  opacity: 0.9;
+}
+
+.why-course-image.left {
+    top: 100px;
+  left: -50px;
+  transform: translateY(-50%) scaleX(-1) scaleY(-1);
+}
+
+.why-course-image.right {
+    top: auto;
+  right: -50px;
+  bottom: -50px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .why-course-image {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-course {
+    padding: 100px 16px;
+  }
+
+  .why-course-title {
+    font-size: 34px;
+  }
+
+  .why-course-desc {
+    font-size: 15px;
+  }
+
+  .why-course-image {
+    display: none;
+  }
+}

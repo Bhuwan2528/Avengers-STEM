@@ -1,0 +1,147 @@
+.pedagogy {
+  position: relative;
+  padding: 140px 20px 160px;
+  background: radial-gradient(
+      circle at center,
+      rgba(120, 255, 160, 0.12) 0%,
+      rgba(0, 0, 0, 0.7) 45%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    #000;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.pedagogy-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Pill */
+.pedagogy-pill {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  margin-bottom: 28px;
+}
+
+/* Title */
+.pedagogy-title {
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* Description */
+.pedagogy-desc {
+  max-width: 760px;
+  margin: 0 auto 90px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Cards layout */
+.pedagogy-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+.pedagogy-card {
+  position: relative;
+  background: radial-gradient(
+    circle at top,
+    rgba(168, 85, 247, 0.35),
+    rgba(0, 0, 0, 0.95)
+  );
+  border-radius: 12px;
+  padding: 36px 24px 40px;
+  text-align: left;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+/* Big index number */
+.pedagogy-index {
+  position: absolute;
+  bottom: -20px;
+  right: 12px;
+  font-size: 140px;
+  font-weight: 800;
+  color: rgba(59, 130, 246, 0.35);
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* Icon placeholders (styled blocks to match look) */
+.pedagogy-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  margin-bottom: 22px;
+  background: linear-gradient(135deg, #9333ea, #2563eb);
+}
+
+.pedagogy-icon.medal {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.pedagogy-icon.tools {
+  background: linear-gradient(135deg, #22c55e, #3b82f6);
+}
+
+.pedagogy-icon.vr {
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+}
+
+.pedagogy-icon.shield {
+  background: linear-gradient(135deg, #10b981, #0ea5e9);
+}
+
+/* Card title */
+.pedagogy-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  max-width: 200px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pedagogy-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pedagogy {
+    padding: 100px 16px 120px;
+  }
+
+  .pedagogy-title {
+    font-size: 32px;
+  }
+
+  .pedagogy-desc {
+    margin-bottom: 60px;
+    font-size: 15px;
+  }
+
+  .pedagogy-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.pedagogy-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #ffffff;
+}
