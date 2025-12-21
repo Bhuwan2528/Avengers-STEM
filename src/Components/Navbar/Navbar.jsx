@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(null);
+  const naviagate = useNavigate();
 
   const toggleMenu = (menu) => {
     setOpenMenu(openMenu === menu ? null : menu);
@@ -30,7 +32,7 @@ const Navbar = () => {
           >
             <span>Labs</span>
             <div className="dropdown">
-              <a href="#">Robotics Lab</a>
+              <a onClick={()=> naviagate('/robotics-lab')}>Robotics Lab</a>
               <a href="#">AR / VR Lab</a>
               <a href="#">Composite Lab</a>
             </div>
