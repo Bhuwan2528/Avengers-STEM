@@ -1,12 +1,12 @@
 import React from "react";
 import "./OurFacilities.css";
 
-import img3D from "../../assets/facility-3d-printer.jpg";
-import imgDrone from "../../assets/facility-drone.jpg";
-import imgIot from "../../assets/facility-iot.jpg";
-import imgMechanical from "../../assets/facility-mechanical.jpg";
-import imgTools from "../../assets/facility-tools.jpg";
-import imgSoldering from "../../assets/facility-soldering.jpg";
+import img3D from "../../assets/3d-printer.avif";
+import imgDrone from "../../assets/drone.avif";
+import imgIot from "../../assets/iot.avif";
+import imgMechanical from "../../assets/mechanical.avif";
+import imgTools from "../../assets/tools.avif";
+import imgSoldering from "../../assets/soldering.avif";
 
 const OurFacilities = () => {
   return (

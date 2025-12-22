@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
+import logo1 from "../../assets/logo1.png"
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -16,14 +17,15 @@ const Navbar = () => {
       <div className="navbar-container">
 
         {/* LOGO */}
-        <div className="navbar-logo">
-          <img src={logo} alt="Rancho Labs" />
+        <div onClick={()=> naviagate('/')} className="navbar-logo">
+          <img id="logo1" src={logo} alt="Rancho Labs" />
+           <img src={logo1} alt="" />
         </div>
 
         {/* NAV LINKS */}
         <nav className="navbar-links">
 
-          <a href="#">Home</a>
+          <a onClick={()=> naviagate('/')}>Home</a>
 
           {/* LABS */}
           <div
@@ -33,8 +35,8 @@ const Navbar = () => {
             <span>Labs</span>
             <div className="dropdown">
               <a onClick={()=> naviagate('/robotics-lab')}>Robotics Lab</a>
-              <a href="#">AR / VR Lab</a>
-              <a href="#">Composite Lab</a>
+              <a onClick={()=> naviagate('/ar-vr-lab')}>AR / VR Lab</a>
+              <a onClick={()=> naviagate('/composite-lab')}>Composite Lab</a>
             </div>
           </div>
 
@@ -45,7 +47,7 @@ const Navbar = () => {
           >
             <span>Products</span>
             <div className="dropdown">
-              <a href="#">iLMS</a>
+              <a onClick={()=> naviagate('/ilms')}>iLMS</a>
             </div>
           </div>
 
@@ -56,13 +58,13 @@ const Navbar = () => {
           >
             <span>Services</span>
             <div className="dropdown">
-              <a href="#">Competition Support</a>
-              <a href="#">Exhibition Support</a>
-              <a href="#">Our Curriculum</a>
+              <a onClick={()=> naviagate('/competition-and-exhibition')}>Competition Support</a>
+              <a onClick={()=> naviagate('/competition-and-exhibition')}>Exhibition Support</a>
+              <a onClick={()=> naviagate('/ilms')}>Our Curriculum</a>
             </div>
           </div>
 
-          <a href="#">Contact Us</a>
+          <a onClick={()=> naviagate('/contact')}>Contact Us</a>
         </nav>
 
         {/* CTA */}

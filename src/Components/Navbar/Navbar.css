@@ -18,8 +18,17 @@
 }
 
 /* LOGO */
+.navbar-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+#logo1{
+    height: 40px;
+}
 .navbar-logo img {
-  height: 36px;
+  height: 26px;
 }
 
 /* LINKS */

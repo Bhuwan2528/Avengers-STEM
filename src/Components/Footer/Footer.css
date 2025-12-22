@@ -26,8 +26,8 @@
 }
 
 .footer-logo {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 80px;
   margin-bottom: 24px;
 
   border-radius: 8px;
@@ -41,7 +41,7 @@
   letter-spacing: 1px;
 }
 .footer-logo img{
-    width: 60px;
+    width: 100px;
 }
 
 .footer-brand p {

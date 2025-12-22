@@ -1,0 +1,128 @@
+.curriculum {
+  background: #f6f8fb;
+  padding: 80px 20px 100px;
+}
+
+/* Title */
+.curriculum-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 80px;
+}
+
+/* Grid */
+.curriculum-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Card */
+.curriculum-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px 34px 44px;
+}
+
+/* Headings (color-coded) */
+.curriculum-card.primary h3 {
+  color: #4cc6c6;
+}
+
+.curriculum-card.middle h3 {
+  color: #7cc242;
+}
+
+.curriculum-card.senior h3 {
+  color: #d18b4c;
+}
+
+.curriculum-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Description */
+.curriculum-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 28px;
+}
+
+/* Grade */
+.curriculum-grade {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.curriculum-card.primary .curriculum-grade {
+  color: #0e7490;
+}
+
+.curriculum-card.middle .curriculum-grade {
+  color: #166534;
+}
+
+.curriculum-card.senior .curriculum-grade {
+  color: #7c2d12;
+}
+
+/* Divider */
+.curriculum-card hr {
+  border: none;
+  height: 1px;
+  background: #93c5fd;
+  margin: 22px 0 26px;
+}
+
+/* List */
+.curriculum-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.curriculum-card li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #334155;
+  margin-bottom: 14px;
+}
+
+.curriculum-card li svg {
+  color: #64748b;
+  font-size: 14px;
+}
+.curriculum-btn{
+    margin-top: 50px;
+}
+/* Responsive */
+@media (max-width: 1024px) {
+  .curriculum-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .curriculum {
+    padding: 90px 16px 100px;
+  }
+
+  .curriculum-title {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./RoboticsLab.css";
+import "./ARVRLab.css";
 import video from "../../assets/robotics-lab.webm"
 import WhyCourse from "../../Components/WhyCourse/WhyCourse";
 import OurLabs from '../../Components/OurLabs/OurLabs'
@@ -9,20 +9,19 @@ import OurFacilities from "../../Components/OurFacilities/OurFacilities";
 import Curriculum from "../../Components/Curriculum/Curriculum"
 import QuestionsCTA from "../../Components/QuestionsCTA/QuestionsCTA";
 
-const RoboticsLab = () => {
+const ARVRLab = () => {
   return (
     <main className="robotics-page">
 
       {/* HERO / BANNER */}
-      <section className="robotics-hero">
-        <div className="robotics-hero-bg" />
-        <div className="robotics-hero-overlay" />
-        <div className="robotics-hero-content">
-          <span className="robotics-hero-pill">ROBOTICS LAB</span>
-          <h1 className="robotics-hero-title">Transform with Robotics</h1>
-          <p className="robotics-hero-desc">
-            Robotics is at the forefront of modern industries, emerging as a
-            groundbreaking technology set to reshape the future.
+      <section className="arvr-hero">
+        <div className="arvr-hero-bg" />
+        <div className="arvr-hero-overlay" />
+        <div className="arvr-hero-content">
+          <span className="arvr-hero-pill">AR / VR LABS</span>
+          <h1 className="arvr-hero-title">Craft your own Reality</h1>
+          <p className="arvr-hero-desc">
+            Augmented and Virtual Reality are revolutionizing modern industries and  technologies poised to reshape the world.
           </p>
         </div>
       </section>
@@ -33,13 +32,11 @@ const RoboticsLab = () => {
           <span className="robotics-stem-pill">CUSTOM STEM LABS</span>
 
           <p className="robotics-stem-subtext">
-            We provide everything from personalized learning spaces through
-            iLMS to hands-on projects and competition support, guiding schools
-            every step of the way.
+            Personalized Learning Spaces  to Empower Schools Every Step of the Way.
           </p>
 
           <h2 className="robotics-stem-title">
-            We design custom Robotics Labs for our schools.
+            We design custom AR/VR Labs for your schools.
           </h2>
         </div>
       </section>
@@ -56,9 +53,9 @@ const RoboticsLab = () => {
         />
       </section>
 
-      <WhyCourse/>
-      <OurLabs/>
-      <SampleDesign value={"Robotics"}/>
+      <WhyCourse value={"Ar Vr Labs"}/>
+      <OurLabs value={"Ar Vr"}/>
+      <SampleDesign value={"Ar Vr"}/>
       <Pedagogy/>
     <OurFacilities/>
     <Curriculum/>
@@ -67,4 +64,4 @@ const RoboticsLab = () => {
   );
 };
 
-export default RoboticsLab;
+export default ARVRLab;

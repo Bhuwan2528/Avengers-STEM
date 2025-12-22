@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 
 /* ASSETS IMPORT */
-import heroImage from "../../assets/hero-image.jpeg";
+import heroVideo from "../../assets/robotics-lab.webm";
 
 
 // School logos
@@ -40,13 +40,18 @@ const Hero = () => {
         </div>
 
         {/* RIGHT VIDEO */}
+        {/* RIGHT VIDEO */}
         <div className="hero-right">
-          <img
-            src={heroImage}
-            alt="Students learning"
+        <video
             className="hero-media"
-            />
+            src={heroVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+        />
         </div>
+
 
       </div>
 

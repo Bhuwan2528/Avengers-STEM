@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { FiInstagram, FiYoutube } from "react-icons/fi";
-import logo from "../../assets/footer-logo.avif"
+import logo from "../../assets/logo.png"
 
 const Footer = () => {
   return (
