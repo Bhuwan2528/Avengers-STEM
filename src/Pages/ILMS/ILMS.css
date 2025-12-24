@@ -313,4 +313,99 @@
   .ilms-why-header h2 {
     font-size: 30px;
   }
+
+  .ilms-why-box,
+  .ilms-feature-card {
+    padding: 40px;
 }
+
+}
+
+
+@media (max-width: 480px) {
+  /* ================= HERO ================= */
+
+  .ilms-hero {
+    min-height: auto;
+  }
+
+  .ilms-hero-inner {
+    grid-template-columns: 1fr;
+    padding: 90px 20px 70px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  /* TEXT SCALE DOWN */
+  .ilms-hero-content h1 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  .ilms-hero-content p {
+    font-size: 14.5px;
+    margin: 0 auto 28px;
+  }
+
+  .ilms-cta {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+
+  /* ================= VIDEO CENTER FIX ================= */
+
+  .ilms-video-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ilms-video-wrap video {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .ilms-video-glow {
+    inset: -100px;
+  }
+
+  /* ================= STATS ================= */
+
+  .ilms-stats {
+    padding: 60px 20px 80px;
+  }
+
+  .ilms-stats h2 {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  /* FORCE 2 CARDS PER ROW */
+  .ilms-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .stat-card {
+    padding: 26px 16px;
+  }
+
+  .stat-card h3 {
+    font-size: 28px;
+  }
+
+  .stat-card p {
+    font-size: 13.5px;
+  }
+
+    /* WHY CHOOSE US – BIG CARD */
+  .ilms-why-box {
+    padding: 28px 22px;
+  }
+
+  /* WHY CHOOSE US – FEATURE CARDS */
+  .ilms-feature-card {
+    padding: 28px 22px;
+  }
+}
+

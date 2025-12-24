@@ -78,20 +78,7 @@
   margin: 0 auto;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .robotics-hero-title {
-    font-size: 36px;
-  }
 
-  .robotics-hero-desc {
-    font-size: 15px;
-  }
-
-  .robotics-hero-content {
-    padding-bottom: 60px;
-  }
-}
 
 /* STEM CONTENT SECTION */
 .robotics-stem {
@@ -143,4 +130,84 @@
   height: auto;
   display: block;
   object-fit: cover;
+}
+
+
+@media (max-width: 700px) {
+  /* HERO */
+    .robotics-hero {
+    height: 75vh;
+  }
+
+  .robotics-hero-title {
+    font-size: 36px;
+  }
+
+  .robotics-hero-desc {
+    font-size: 15.5px;
+  }
+
+  .robotics-hero-content {
+    padding-bottom: 60px;
+  }
+
+  /* STEM SECTION */
+  .robotics-stem {
+    padding: 90px 20px 80px;
+  }
+
+  .robotics-stem-subtext {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .robotics-stem-title {
+    font-size: 36px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  /* HERO */
+    .robotics-hero {
+    height: 65vh;
+  }
+
+  .robotics-hero-pill {
+    font-size: 11px;
+    padding: 6px 14px;
+  }
+
+  .robotics-hero-title {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .robotics-hero-desc {
+    font-size: 14.5px;
+  }
+
+  .robotics-hero-content {
+    padding-bottom: 50px;
+  }
+
+  /* STEM SECTION */
+  .robotics-stem {
+    padding: 70px 18px 70px;
+  }
+
+  .robotics-stem-pill {
+    font-size: 11px;
+    padding: 6px 16px;
+  }
+
+  .robotics-stem-subtext {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .robotics-stem-title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
 }

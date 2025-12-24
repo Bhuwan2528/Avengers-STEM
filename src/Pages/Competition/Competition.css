@@ -1,4 +1,16 @@
-/* ================= PAGE BASE ================= */
+/* ===============================
+   GLOBAL SAFETY
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .competition-page {
   background: #020617;
   color: #ffffff;
@@ -7,10 +19,13 @@
     sans-serif;
 }
 
-/* ================= HERO ================= */
+/* ===============================
+   HERO (VIDEO) – FIXED SIZE
+================================ */
 .competition-hero {
   position: relative;
-  min-height: 100vh;
+  height: 85vh;              /* 👈 FIX: not full 100vh */
+  min-height: 560px;
   width: 100%;
   overflow: hidden;
 }
@@ -28,9 +43,9 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(2, 6, 23, 0.45) 0%,
-    rgba(2, 6, 23, 0.85) 60%,
-    rgb(1, 16, 32)100%
+    rgba(2, 6, 23, 0.4) 0%,
+    rgba(2, 6, 23, 0.85) 65%,
+    rgb(1, 16, 32) 100%
   );
   z-index: 1;
 }
@@ -38,64 +53,62 @@
 .hero-content {
   position: absolute;
   left: 50%;
-  bottom: 18%;            /* 👈 KEY: lower-third placement */
+  bottom: 16%;
   transform: translateX(-50%);
   z-index: 2;
-
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
-  padding: 0 24px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 0 20px;
   text-align: center;
 }
-
 
 .hero-pill {
   display: inline-block;
   padding: 8px 18px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(6px);
   font-size: 12px;
   letter-spacing: 0.12em;
   font-weight: 600;
   color: #cbd5e1;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
 .hero-content h1 {
-  font-size: 56px;
+  font-size: 52px;
   line-height: 1.15;
   font-weight: 600;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .hero-content p {
   font-size: 17px;
   color: #94a3b8;
-  max-width: 640px;
+  max-width: 620px;
+  margin: 0 auto;
 }
 
-/* ================= SECOND SECTION ================= */
+/* ===============================
+   GALLERY (NO HORIZONTAL BUG)
+================================ */
 .competition-gallery {
-  position: relative;
-  padding: 0px 0 110px;
+  padding: 0 0 110px;
   background: linear-gradient(
     to bottom,
     rgb(1, 16, 32) 0%,
     rgba(1, 11, 34, 0.95) 100%
   );
+  overflow-x: hidden;
 }
 
 .gallery-heading {
   text-align: center;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 500;
   color: #e5e7eb;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
+  padding: 0 16px;
 }
 
 .gallery-heading span {
@@ -103,19 +116,23 @@
   font-weight: 600;
 }
 
-/* ================= IMAGE STRIP ================= */
 .gallery-strip {
   display: flex;
-  gap: 28px;
-  padding: 0 40px;
+  gap: 24px;
+  padding: 0 24px;
+  overflow-x: auto;              /* 👈 FIX */
+  overscroll-behavior-x: contain;
+}
+
+.gallery-strip::-webkit-scrollbar {
+  display: none;
 }
 
 .gallery-item {
-  flex: 0 0 420px;
-  height: 280px;
+  flex: 0 0 380px;
+  height: 260px;
   border-radius: 18px;
   overflow: hidden;
-  background: #000;
 }
 
 .gallery-item img {
@@ -124,88 +141,38 @@
   object-fit: cover;
 }
 
-/* cropped repeated ones */
-.gallery-item.cropped {
-  flex: 0 0 360px;
-}
-
-.gallery-item.cropped img {
-  object-position: center;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1024px) {
-  .hero-content h1 {
-    font-size: 44px;
-  }
-
-  .gallery-strip {
-    gap: 20px;
-  }
-
-  .gallery-item {
-    flex: 0 0 320px;
-    height: 220px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 36px;
-  }
-
-  .gallery-strip {
-    overflow-x: auto;
-    padding-bottom: 10px;
-  }
-}
-
-
-
-/* ================= VICTORIES ================= */
+/* ===============================
+   VICTORIES
+================================ */
 .victories-section {
   background: #f8fafc;
   padding: 120px 24px;
   color: #0f172a;
+  overflow-x: hidden;
 }
 
 .victories-header {
   text-align: center;
   max-width: 900px;
-  margin: 0 auto 100px;
-}
-
-.victories-pill {
-  display: inline-block;
-  padding: 8px 18px;
-  border-radius: 999px;
-  background: #0f172a;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  margin-bottom: 18px;
+  margin: 0 auto 90px;
 }
 
 .victories-header h2 {
-  font-size: 44px;
-  font-weight: 600;
+  font-size: 42px;
   margin-bottom: 16px;
 }
 
 .victories-header p {
   font-size: 17px;
   color: #475569;
-  line-height: 1.7;
 }
 
-/* ================= ROW ================= */
 .victory-row {
   max-width: 1000px;
-  margin: 0 auto 120px;
+  margin: 0 auto 110px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 48px;
   align-items: center;
 }
 
@@ -217,115 +184,87 @@
   direction: ltr;
 }
 
-/* ================= IMAGE ================= */
-.victory-image {
-  width: 100%;
-}
-
 .victory-image img {
   width: 100%;
-  height: 420px;
+  height: 400px;
   object-fit: cover;
   border-radius: 20px;
 }
 
-/* ================= CONTENT ================= */
 .victory-content h3 {
-  font-size: 32px;
-  line-height: 1.3;
-  font-weight: 600;
-  margin-bottom: 24px;
+  font-size: 30px;
+  margin-bottom: 22px;
 }
 
 .victory-content p {
-  font-size: 17px;
+  font-size: 16.5px;
   color: #475569;
-  line-height: 1.7;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1024px) {
-  .victory-row {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .victory-image img {
-    height: 320px;
-  }
-
-  .victories-header h2 {
-    font-size: 36px;
-  }
-}
-
-
-
-/* ================= WINS SECTION ================= */
+/* ===============================
+   WINS – VISUAL REWORK (CLEAN)
+================================ */
 .wins-section {
-  background: radial-gradient(
-    circle at top,
-    #111827 0%,
-    #020617 70%
-  );
+  background: radial-gradient(circle at top, #111827 0%, #020617 70%);
   padding: 120px 24px;
-  color: #e5e7eb;
 }
 
 .wins-header {
   text-align: center;
   max-width: 900px;
-  margin: 0 auto 80px;
+  margin: 0 auto 90px;
 }
 
 .wins-header h2 {
-  font-size: 44px;
-  font-weight: 600;
-  line-height: 1.25;
+  font-size: 42px;
+  font-weight: 700;
   margin-bottom: 18px;
 }
 
 .wins-header p {
   font-size: 17px;
   color: #94a3b8;
-  line-height: 1.6;
 }
 
-/* ================= GRID ================= */
+/* GRID */
 .wins-grid {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 36px;
 }
 
-/* ================= CARD ================= */
+/* CARD */
 .win-card {
   background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.06),
-    rgba(255, 255, 255, 0.02)
+    180deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.03)
   );
-  border-radius: 18px;
+  border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.45);
 }
 
+/* IMAGE */
 .win-card img {
   width: 100%;
-  height: 220px;
+  height: 210px;
   object-fit: cover;
 }
 
+/* BODY */
 .win-card-body {
-  padding: 26px 24px 30px;
+  padding: 26px 26px 30px;
 }
 
 .win-card-body h4 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 6px;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #ffffff;
 }
 
 .win-card-body span {
@@ -335,6 +274,7 @@
   margin-bottom: 18px;
 }
 
+/* LIST */
 .win-card-body ul {
   list-style: none;
   padding: 0;
@@ -351,7 +291,9 @@
   color: #ffffff;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ===============================
+   RESPONSIVE
+================================ */
 @media (max-width: 1024px) {
   .wins-grid {
     grid-template-columns: 1fr;
@@ -362,10 +304,9 @@
   }
 }
 
-
-
-
-/* ================= SUPPORT SECTION ================= */
+/* ===============================
+   SUPPORT + BUTTON RESTORED
+================================ */
 .support-section {
   background: linear-gradient(
     to bottom,
@@ -373,30 +314,24 @@
     #071c3a 40%,
     #061733 100%
   );
-  padding: 80px 24px 80px;
-  color: #ffffff;
+  padding: 90px 24px;
 }
 
 .support-header {
-  max-width: 900px;
-  margin: 0 auto 90px;
   text-align: center;
+  max-width: 900px;
+  margin: 0 auto 70px;
 }
 
 .support-header h2 {
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 1.25;
-  margin-bottom: 18px;
+  font-size: 42px;
 }
 
 .support-header p {
   font-size: 17px;
   color: #cbd5e1;
-  line-height: 1.7;
 }
 
-/* ================= CARDS ================= */
 .support-cards {
   max-width: 1100px;
   margin: 0 auto;
@@ -409,28 +344,9 @@
   background: #f8fafc;
   color: #0f172a;
   border-radius: 22px;
-  padding: 34px 30px 40px;
+  padding: 34px 30px;
 }
 
-.support-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #0d6efd;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 22px;
-}
-
-.support-card h4 {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.6;
-}
-
-/* ================= CTA ================= */
 .support-cta {
   margin-top: 70px;
   text-align: center;
@@ -440,7 +356,7 @@
   background: linear-gradient(135deg, #4f46e5, #2563eb);
   color: #ffffff;
   border: none;
-  padding: 16px 28px;
+  padding: 16px 30px;
   font-size: 15px;
   font-weight: 600;
   border-radius: 12px;
@@ -450,23 +366,35 @@
   gap: 10px;
 }
 
-.support-cta span {
-  font-size: 18px;
-}
-
-/* ================= RESPONSIVE ================= */
+/* ===============================
+   RESPONSIVE
+================================ */
 @media (max-width: 1024px) {
+  .victory-row,
+  .wins-grid,
   .support-cards {
     grid-template-columns: 1fr;
   }
 
-  .support-header h2 {
-    font-size: 36px;
+  .hero-content h1 {
+    font-size: 38px;
   }
 }
 
+@media (max-width: 768px) {
+  .competition-hero {
+    height: 70vh;
+    min-height: 500px;
+  }
 
-/* ================= EXHIBITION SECTION ================= */
+  .hero-content h1 {
+    font-size: 32px;
+  }
+}
+
+/* ===============================
+   EXHIBITION SECTION
+================================ */
 .exhibition-section {
   background: radial-gradient(
     circle at top,
@@ -474,13 +402,15 @@
     #061733 55%,
     #040b1d 100%
   );
-  padding: 100px 24px 100px;
+  padding: 110px 24px;
   color: #ffffff;
+  overflow-x: hidden;
 }
 
+/* HEADER */
 .exhibition-header {
   max-width: 950px;
-  margin: 0 auto 100px;
+  margin: 0 auto 90px;
   text-align: center;
 }
 
@@ -493,11 +423,11 @@
 
 .exhibition-header p {
   font-size: 17px;
-  color: #cbd5e1;
   line-height: 1.7;
+  color: #cbd5e1;
 }
 
-/* ================= CARDS ================= */
+/* CARDS GRID */
 .exhibition-cards {
   max-width: 1150px;
   margin: 0 auto;
@@ -506,46 +436,86 @@
   gap: 36px;
 }
 
+/* CARD */
 .exhibition-card {
   background: #f8fafc;
   color: #0f172a;
   border-radius: 26px;
   padding: 46px 40px 52px;
-  min-height: 320px;
+  min-height: 300px;
 
   display: flex;
   flex-direction: column;
 }
 
+/* ICON */
 .exhibition-icon {
-  width: 54px;
-  height: 54px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #ffffff;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   margin-bottom: 26px;
 }
 
+/* TEXT */
 .exhibition-card p {
   font-size: 18px;
   line-height: 1.65;
   font-weight: 500;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/* -------- TABLET -------- */
 @media (max-width: 1024px) {
-  .exhibition-cards {
-    grid-template-columns: 1fr;
+
+  .exhibition-section {
+    padding: 90px 24px;
   }
 
   .exhibition-header h2 {
     font-size: 34px;
   }
 
+  .exhibition-cards {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
   .exhibition-card {
     min-height: auto;
+    padding: 36px 32px 40px;
+  }
+}
+
+/* -------- MOBILE -------- */
+@media (max-width: 768px) {
+
+  .exhibition-section {
+    padding: 70px 20px;
+  }
+
+  .exhibition-header {
+    margin-bottom: 60px;
+  }
+
+  .exhibition-header h2 {
+    font-size: 28px;
+  }
+
+  .exhibition-header p {
+    font-size: 15.5px;
+  }
+
+  .exhibition-card p {
+    font-size: 16px;
   }
 }

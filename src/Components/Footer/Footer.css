@@ -104,3 +104,83 @@
 .footer-socials a:hover {
   color: #ffffff;
 }
+
+
+
+/* ===============================
+   FOOTER RESPONSIVE
+================================ */
+
+/* -------- TABLET & BELOW -------- */
+@media (max-width: 1024px) {
+
+  .footer-top {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    padding: 80px 5% 70px;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+}
+
+/* -------- MOBILE -------- */
+@media (max-width: 768px) {
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 70px 6% 60px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    margin: 0 auto;
+  }
+
+  .footer-logo {
+    margin: 0 auto 20px;
+  }
+
+  .footer-brand p {
+    font-size: 15.5px;
+  }
+
+  .footer-col h4 {
+    font-size: 17px;
+    margin-bottom: 16px;
+  }
+
+  .footer-col li {
+    font-size: 16px;
+  }
+
+  /* Bottom bar */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    padding: 22px 6%;
+  }
+}
+
+/* -------- SMALL PHONES -------- */
+@media (max-width: 420px) {
+
+  .footer-top {
+    gap: 40px;
+  }
+
+  .footer-brand p {
+    font-size: 15px;
+  }
+
+  .footer-col li {
+    font-size: 15px;
+  }
+
+  .footer-socials {
+    gap: 14px;
+  }
+}

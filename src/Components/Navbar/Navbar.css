@@ -1,3 +1,4 @@
+/* ================= NAVBAR BASE ================= */
 .navbar {
   position: sticky;
   top: 0;
@@ -9,36 +10,35 @@
 .navbar-container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 18px 5%;
-  padding-left: 2%;
-
+  padding: 18px 5% 18px 2%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 /* LOGO */
-.navbar-logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
 }
-#logo1{
-    height: 40px;
+
+#logo1 {
+  height: 40px;
 }
+
 .navbar-logo img {
   height: 26px;
 }
 
-/* LINKS */
+/* ================= DESKTOP NAV ================= */
 .navbar-links {
   display: flex;
   align-items: center;
   gap: 34px;
 }
 
-/* NORMAL LINK */
 .navbar-links a,
 .nav-item span {
   color: #e5e7eb;
@@ -48,31 +48,26 @@
   text-decoration: none;
 }
 
-/* NAV ITEM */
+/* DROPDOWN */
 .nav-item {
   position: relative;
 }
 
-/* DROPDOWN */
 .dropdown {
   position: absolute;
   top: 38px;
   left: 0;
-
   min-width: 200px;
   background: #020617;
   border-radius: 14px;
   padding: 12px 0;
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-
   box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-  transition: all 0.25s ease;
+  transition: 0.25s ease;
 }
 
-/* DROPDOWN LINKS */
 .dropdown a {
   display: block;
   padding: 10px 20px;
@@ -82,10 +77,10 @@
 
 .dropdown a:hover {
   background: rgba(255,255,255,0.05);
-  color: #ffffff;
+  color: #fff;
 }
 
-/* DESKTOP HOVER */
+/* DESKTOP HOVER ONLY */
 @media (hover: hover) {
   .nav-item:hover .dropdown {
     opacity: 1;
@@ -94,42 +89,137 @@
   }
 }
 
-/* MOBILE CLICK */
-.nav-item.open .dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-/* CTA */
+/* ================= CTA ================= */
 .cta-button {
   background: linear-gradient(135deg, #3b82f6, #2563eb);
   border: none;
   color: #fff;
-
   padding: 15px 25px;
   border-radius: 12px;
-
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+}
 
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ================= MOBILE SIDEBAR ================= */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 82%;
+  max-width: 340px;
+  height: 100vh;
+  background: #020617;
+  z-index: 2000;
+  padding: 22px;
+  transition: right 0.35s ease;
+}
+
+.mobile-sidebar.open {
+  right: 0;
+}
+
+.sidebar-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
-  transition: 3s ease;
 }
 
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 16px 40px rgba(37, 99, 235, 0.6),
-    inset 0 1px 0 rgba(255,255,255,0.25);
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
 }
 
-.cta-arrow {
-  font-size: 18px;
+/* ================= SIDEBAR LINKS ================= */
+.sidebar-links {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
 }
-.cta-button:hover .cta-arrow {
-  transform: translate(3px, -3px);
+
+.sidebar-main {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  cursor: pointer;
+}
+
+/* ACCORDION */
+.sidebar-accordion {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.sidebar-accordion-title {
+  padding: 14px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.sidebar-accordion-content {
+  padding-left: 10px;
+  display: none;
+  flex-direction: column;
+}
+
+.sidebar-accordion.open .sidebar-accordion-content {
+  display: flex;
+}
+
+.sidebar-accordion-content a {
+  padding: 8px 0;
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+/* CTA */
+.sidebar-cta {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* BACKDROP */
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1500;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .navbar-links,
+  .navbar-cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-item .dropdown {
+    display: none;
+  }
 }

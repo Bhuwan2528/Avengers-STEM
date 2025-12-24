@@ -1,13 +1,13 @@
-/* PAGE ROOT */
+/* ================= PAGE ROOT ================= */
 .robotics-page {
   width: 100%;
   overflow-x: hidden;
 }
 
-/* HERO SECTION */
+/* ================= HERO SECTION ================= */
 .arvr-hero {
   position: relative;
-  height: calc(100vh - 80px); /* adjust if navbar height differs */
+  height: calc(100vh - 80px); /* navbar height */
   width: 100%;
   display: flex;
   align-items: flex-end;
@@ -18,14 +18,14 @@
 .arvr-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("./../../assets/labs/lab1.avif"); /* YOU will replace */
+  background-image: url("./../../assets/labs/lab1.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transform: scale(1.02);
 }
 
-/* DARK GRADIENT OVERLAY */
+/* OVERLAY */
 .arvr-hero-overlay {
   position: absolute;
   inset: 0;
@@ -37,7 +37,7 @@
   );
 }
 
-/* CONTENT */
+/* HERO CONTENT */
 .arvr-hero-content {
   position: relative;
   z-index: 2;
@@ -78,22 +78,7 @@
   margin: 0 auto;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .arvr-hero-title {
-    font-size: 36px;
-  }
-
-  .arvr-hero-desc {
-    font-size: 15px;
-  }
-
-  .arvr-hero-content {
-    padding-bottom: 60px;
-  }
-}
-
-/* STEM CONTENT SECTION */
+/* ================= STEM SECTION ================= */
 .robotics-stem {
   background: #f6f8fb;
   padding: 120px 20px 100px;
@@ -132,7 +117,7 @@
   color: #0f172a;
 }
 
-/* FULL WIDTH VIDEO */
+/* ================= FULL WIDTH VIDEO ================= */
 .robotics-video {
   width: 100%;
   overflow: hidden;
@@ -143,4 +128,80 @@
   height: auto;
   display: block;
   object-fit: cover;
+}
+
+/* ================= TABLET (≤700px) ================= */
+@media (max-width: 700px) {
+  .arvr-hero {
+    height: 75vh;
+  }
+
+  .arvr-hero-title {
+    font-size: 36px;
+  }
+
+  .arvr-hero-desc {
+    font-size: 15.5px;
+  }
+
+  .arvr-hero-content {
+    padding-bottom: 60px;
+  }
+
+  .robotics-stem {
+    padding: 90px 20px 80px;
+  }
+
+  .robotics-stem-subtext {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .robotics-stem-title {
+    font-size: 36px;
+  }
+}
+
+/* ================= MOBILE (≤480px) ================= */
+@media (max-width: 480px) {
+  .arvr-hero {
+    height: 65vh;
+  }
+
+  .arvr-hero-pill {
+    font-size: 11px;
+    padding: 6px 14px;
+  }
+
+  .arvr-hero-title {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .arvr-hero-desc {
+    font-size: 14.5px;
+  }
+
+  .arvr-hero-content {
+    padding-bottom: 50px;
+  }
+
+  .robotics-stem {
+    padding: 70px 18px 70px;
+  }
+
+  .robotics-stem-pill {
+    font-size: 11px;
+    padding: 6px 16px;
+  }
+
+  .robotics-stem-subtext {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .robotics-stem-title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
 }

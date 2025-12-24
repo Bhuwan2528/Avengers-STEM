@@ -1,10 +1,14 @@
-/* PAGE ROOT */
+/* ===============================
+   PAGE ROOT
+================================ */
 .robotics-page {
   width: 100%;
   overflow-x: hidden;
 }
 
-/* HERO SECTION */
+/* ===============================
+   COMPOSITE HERO SECTION
+================================ */
 .composite-hero {
   position: relative;
   height: calc(100vh - 80px); /* adjust if navbar height differs */
@@ -18,7 +22,7 @@
 .composite-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("./../../assets/composite-banner.avif"); /* YOU will replace */
+  background-image: url("./../../assets/composite-banner.avif"); /* replace if needed */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,22 +82,9 @@
   margin: 0 auto;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .composite-hero-title {
-    font-size: 36px;
-  }
-
-  .composite-hero-desc {
-    font-size: 15px;
-  }
-
-  .composite-hero-content {
-    padding-bottom: 60px;
-  }
-}
-
-/* STEM CONTENT SECTION */
+/* ===============================
+   STEM CONTENT SECTION
+================================ */
 .robotics-stem {
   background: #f6f8fb;
   padding: 120px 20px 100px;
@@ -117,19 +108,20 @@
   margin-bottom: 26px;
 }
 
+.robotics-stem-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #0f172a;
+  margin-bottom: 28px;
+}
+
 .robotics-stem-subtext {
   max-width: 850px;
   margin: 0 auto 48px;
   font-size: 17px;
   line-height: 1.7;
   color: #475569;
-}
-
-.robotics-stem-title {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.25;
-  color: #0f172a;
 }
 
 /* FULL WIDTH VIDEO */
@@ -143,4 +135,88 @@
   height: auto;
   display: block;
   object-fit: cover;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/* -------- TABLET & BELOW -------- */
+@media (max-width: 1024px) {
+
+  .composite-hero {
+    height: auto;
+    min-height: 80vh;
+  }
+
+  .composite-hero-title {
+    font-size: 42px;
+  }
+
+  .robotics-stem {
+    padding: 100px 20px 90px;
+  }
+
+  .robotics-stem-title {
+    font-size: 42px;
+  }
+}
+
+/* -------- MOBILE -------- */
+@media (max-width: 768px) {
+
+  .composite-hero {
+    min-height: 75vh;
+  }
+
+  .composite-hero-content {
+    padding: 0 16px 60px;
+  }
+
+  .composite-hero-pill {
+    font-size: 12px;
+    padding: 7px 16px;
+  }
+
+  .composite-hero-title {
+    font-size: 34px;
+  }
+
+  .composite-hero-desc {
+    font-size: 15px;
+  }
+
+  .robotics-stem {
+    padding: 80px 16px 70px;
+  }
+
+  .robotics-stem-pill {
+    font-size: 12px;
+    padding: 7px 18px;
+  }
+
+  .robotics-stem-title {
+    font-size: 34px;
+  }
+
+  .robotics-stem-subtext {
+    font-size: 15.5px;
+    margin-bottom: 40px;
+  }
+}
+
+/* -------- SMALL PHONES -------- */
+@media (max-width: 420px) {
+
+  .composite-hero-title {
+    font-size: 30px;
+  }
+
+  .robotics-stem-title {
+    font-size: 30px;
+  }
+
+  .robotics-stem-subtext {
+    font-size: 14.5px;
+  }
 }

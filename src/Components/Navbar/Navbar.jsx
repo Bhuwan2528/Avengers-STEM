@@ -1,80 +1,125 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
-import logo1 from "../../assets/logo1.png"
+import logo1 from "../../assets/logo1.png";
 import { useNavigate } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState(null);
-  const naviagate = useNavigate();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeAccordion, setActiveAccordion] = useState(null);
+  const navigate = useNavigate();
 
-  const toggleMenu = (menu) => {
-    setOpenMenu(openMenu === menu ? null : menu);
+  const handleNav = (path) => {
+    navigate(path);
+    setMobileOpen(false);
+    setActiveAccordion(null);
+  };
+
+  const toggleAccordion = (key) => {
+    setActiveAccordion(activeAccordion === key ? null : key);
   };
 
   return (
     <header className="navbar">
       <div className="navbar-container">
-
-        {/* LOGO */}
-        <div onClick={()=> naviagate('/')} className="navbar-logo">
-          <img id="logo1" src={logo} alt="Rancho Labs" />
-           <img src={logo1} alt="" />
+        <div className="navbar-logo" onClick={() => handleNav("/")}>
+          <img id="logo1" src={logo} alt="" />
+          <img src={logo1} alt="" />
         </div>
 
-        {/* NAV LINKS */}
+        {/* DESKTOP */}
         <nav className="navbar-links">
+          <a onClick={() => handleNav("/")}>Home</a>
 
-          <a onClick={()=> naviagate('/')}>Home</a>
-
-          {/* LABS */}
-          <div
-            className={`nav-item ${openMenu === "labs" ? "open" : ""}`}
-            onClick={() => toggleMenu("labs")}
-          >
+          <div className="nav-item">
             <span>Labs</span>
             <div className="dropdown">
-              <a onClick={()=> naviagate('/robotics-lab')}>Robotics Lab</a>
-              <a onClick={()=> naviagate('/ar-vr-lab')}>AR / VR Lab</a>
-              <a onClick={()=> naviagate('/composite-lab')}>Composite Lab</a>
+              <a onClick={() => handleNav("/robotics-lab")}>Robotics Lab</a>
+              <a onClick={() => handleNav("/ar-vr-lab")}>AR / VR Lab</a>
+              <a onClick={() => handleNav("/composite-lab")}>Composite Lab</a>
             </div>
           </div>
 
-          {/* PRODUCTS */}
-          <div
-            className={`nav-item ${openMenu === "products" ? "open" : ""}`}
-            onClick={() => toggleMenu("products")}
-          >
+          <div className="nav-item">
             <span>Products</span>
             <div className="dropdown">
-              <a onClick={()=> naviagate('/ilms')}>iLMS</a>
+              <a onClick={() => handleNav("/ilms")}>iLMS</a>
             </div>
           </div>
 
-          {/* SERVICES */}
-          <div
-            className={`nav-item ${openMenu === "services" ? "open" : ""}`}
-            onClick={() => toggleMenu("services")}
-          >
+          <div className="nav-item">
             <span>Services</span>
             <div className="dropdown">
-              <a onClick={()=> naviagate('/competition-and-exhibition')}>Competition Support</a>
-              <a onClick={()=> naviagate('/competition-and-exhibition')}>Exhibition Support</a>
-              <a onClick={()=> naviagate('/ilms')}>Our Curriculum</a>
+              <a onClick={() => handleNav("/competition-and-exhibition")}>Competition Support</a>
+              <a onClick={() => handleNav("/competition-and-exhibition")}>Exhibition Support</a>
+              <a onClick={() => handleNav("/ilms")}>Our Curriculum</a>
             </div>
           </div>
 
-          <a onClick={()=> naviagate('/contact')}>Contact Us</a>
+          <a onClick={() => handleNav("/contact")}>Contact Us</a>
         </nav>
 
-        {/* CTA */}
-        <div className="navbar-cta">
-          <button className="cta-button">
-            Book a Meeting <span className="cta-arrow">↗</span>
+        <button className="hamburger" onClick={() => setMobileOpen(true)}>
+          <FiMenu />
+        </button>
+      </div>
+
+      {/* MOBILE SIDEBAR */}
+      <div className={`mobile-sidebar ${mobileOpen ? "open" : ""}`}>
+        <div className="sidebar-header">
+          <div className="navbar-logo">
+            <img id="logo1" src={logo} alt="" />
+            <img src={logo1} alt="" />
+          </div>
+          <button className="close-btn" onClick={() => setMobileOpen(false)}>
+            <FiX />
           </button>
         </div>
- 
+
+        <div className="sidebar-links">
+          <div className="sidebar-main" onClick={() => handleNav("/")}>Home</div>
+
+          <div className={`sidebar-accordion ${activeAccordion === "labs" ? "open" : ""}`}>
+            <div className="sidebar-accordion-title" onClick={() => toggleAccordion("labs")}>
+              Labs
+            </div>
+            <div className="sidebar-accordion-content">
+              <a onClick={() => handleNav("/robotics-lab")}>Robotics Lab</a>
+              <a onClick={() => handleNav("/ar-vr-lab")}>AR / VR Lab</a>
+              <a onClick={() => handleNav("/composite-lab")}>Composite Lab</a>
+            </div>
+          </div>
+
+          <div className={`sidebar-accordion ${activeAccordion === "products" ? "open" : ""}`}>
+            <div className="sidebar-accordion-title" onClick={() => toggleAccordion("products")}>
+              Products
+            </div>
+            <div className="sidebar-accordion-content">
+              <a onClick={() => handleNav("/ilms")}>iLMS</a>
+            </div>
+          </div>
+
+          <div className={`sidebar-accordion ${activeAccordion === "services" ? "open" : ""}`}>
+            <div className="sidebar-accordion-title" onClick={() => toggleAccordion("services")}>
+              Services
+            </div>
+            <div className="sidebar-accordion-content">
+              <a onClick={() => handleNav("/competition-and-exhibition")}>Competition Support</a>
+              <a onClick={() => handleNav("/competition-and-exhibition")}>Exhibition Support</a>
+              <a onClick={() => handleNav("/ilms")}>Our Curriculum</a>
+            </div>
+          </div>
+
+          <div className="sidebar-main" onClick={() => handleNav("/contact")}>
+            Contact Us
+          </div>
+
+          <button className="sidebar-cta">Book a Meeting</button>
+        </div>
       </div>
+
+      {mobileOpen && <div className="sidebar-backdrop" onClick={() => setMobileOpen(false)} />}
     </header>
   );
 };

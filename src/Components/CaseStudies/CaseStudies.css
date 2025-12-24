@@ -136,3 +136,115 @@
   background: #111827;
   border-color: #111827;
 }
+
+
+
+/* ===============================
+   CASE SECTION RESPONSIVE
+================================ */
+
+/* -------- TABLET & BELOW -------- */
+@media (max-width: 1024px) {
+
+  .case-section {
+    padding: 110px 0;
+  }
+
+  .case-title {
+    font-size: 46px;
+  }
+
+  .case-subtitle {
+    margin-bottom: 70px;
+    font-size: 16.5px;
+  }
+
+  .case-grid {
+    gap: 32px;
+  }
+
+  .case-card img {
+    height: 240px;
+  }
+}
+
+/* -------- MOBILE -------- */
+@media (max-width: 768px) {
+
+  .case-section {
+    padding: 80px 0;
+  }
+
+  .case-container {
+    padding: 0 6%;
+  }
+
+  .case-pill {
+    font-size: 11px;
+    padding: 10px 14px;
+    margin-bottom: 22px;
+  }
+
+  .case-title {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .case-subtitle {
+    font-size: 15.5px;
+    margin-bottom: 50px;
+  }
+
+  /* Grid → single column */
+  .case-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .case-card {
+    padding: 26px;
+  }
+
+  .case-card img {
+    height: 220px;
+    margin-bottom: 22px;
+  }
+
+  .case-card h3 {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .case-card p {
+    font-size: 14.5px;
+  }
+
+  .case-btn {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}
+
+/* -------- SMALL PHONES -------- */
+@media (max-width: 420px) {
+
+  .case-title {
+    font-size: 30px;
+  }
+
+  .case-subtitle {
+    font-size: 14.8px;
+  }
+
+  .case-card {
+    padding: 22px;
+  }
+
+  .case-card img {
+    height: 200px;
+  }
+
+  .case-card h3 {
+    font-size: 20px;
+  }
+}

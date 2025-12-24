@@ -245,3 +245,88 @@
   line-height: 1.6;
   color: #6b7280;
 }
+
+
+@media (max-width: 700px) {
+  .choose-section {
+    padding: 80px 0;
+  }
+
+  .choose-intro {
+    margin-bottom: 60px;
+    padding: 0 20px;
+  }
+
+  .choose-intro h2 {
+    font-size: 36px;
+  }
+
+  .stack-card-inner {
+    padding: 50px 30px;
+  }
+
+  .stack-card h3 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .labs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .card-2-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .choose-section {
+    padding: 60px 0;
+  }
+
+  .choose-intro h2 {
+    font-size: 28px;
+  }
+
+  .choose-intro p {
+    font-size: 15px;
+  }
+
+  .stack-area {
+    gap: 50px;
+  }
+
+  .stack-card-inner {
+    padding: 36px 20px;
+  }
+
+  .stack-card h3 {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+
+  .labs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-card img {
+    height: 180px;
+  }
+
+  .card-2-text h3 {
+    font-size: 24px;
+  }
+
+  .icon-grid {
+    grid-template-columns: 1fr;
+  }
+}
