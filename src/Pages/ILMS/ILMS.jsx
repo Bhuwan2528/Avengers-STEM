@@ -58,19 +58,19 @@ const ILMS = () => {
 
             <div className="ilms-stats-grid">
             <div className="stat-card">
-                <h3>20+</h3>
-                <p>Schools Onboard</p>
+                <h3>15 Y+</h3>
+                <p>Legacy</p>
             </div>
             <div className="stat-card">
-                <h3>25K+</h3>
+                <h3>1 Lac +</h3>
                 <p>Student base</p>
             </div>
             <div className="stat-card">
-                <h3>100+</h3>
+                <h3>500+</h3>
                 <p>Projects created</p>
             </div>
             <div className="stat-card">
-                <h3>200+</h3>
+                <h3>1K+</h3>
                 <p>Hours of content</p>
             </div>
             </div>
@@ -81,7 +81,7 @@ const ILMS = () => {
   {/* HEADER */}
   <div className="ilms-why-header">
     <span className="ilms-pill">WHY CHOOSE US?</span>
-    <h2>Innovate, Engage, Achieve</h2>
+    <h2>Build, Launch, Lead</h2>
     <p>
       Streamline your teaching process, foster student engagement, and
       achieve academic success effortlessly with our all-in-one platform

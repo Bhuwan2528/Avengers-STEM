@@ -6,6 +6,7 @@ import ChooseSection from '../Components/ChooseSection/ChooseSection'
 import CaseStudies from '../Components/CaseStudies/CaseStudies'
 import Testimonials from '../Components/Testimonials/Testimonials'
 import Footer from "../Components/Footer/Footer"
+import ContactForm from '../Components/ContactForm/ContactForm'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <ChooseSection/>
       <CaseStudies/>
       <Testimonials/>
+      <ContactForm/>
     </div>
   )
 }

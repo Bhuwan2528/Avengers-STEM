@@ -1,10 +1,15 @@
 .hero {
   position: relative;
-  background: #000;
+  background: radial-gradient(
+      800px 400px at 15% 30%,
+      rgba(37, 99, 235, 0.15),
+      transparent 60%
+    ),
+    #000;
   overflow: hidden;
 }
 
-/* GRID */
+/* GRID BACKGROUND */
 .hero-grid {
   position: absolute;
   inset: 0;
@@ -15,72 +20,144 @@
   z-index: 0;
 }
 
-/* CONTENT */
+/* LAYOUT */
 .hero-container {
   position: relative;
   z-index: 2;
-  max-width: 1280px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 80px 5%;
+  padding: 80px 4% 70px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 60px;
   align-items: center;
 }
 
-/* LEFT */
-.hero-left h1 {
-  font-size: 52px;
+/* LEFT CONTENT */
+.hero-left {
+  max-width: 620px;
+}
+
+.hero-badge {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.15);
+  color: #93c5fd;
+  font-size: 12px;
   font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-left h1 {
+  font-size: 42px;
+  font-weight: 700;
   color: #fff;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .hero-left h1 span {
   color: #f5b300;
 }
 
-.hero-left p {
-  margin-top: 20px;
-  max-width: 520px;
-  color: #b5b9c6;
-  line-height: 1.7;
-  font-size: 17px;
+.hero-lead {
+  margin-top: 22px;
+  font-size: 20px;
+  color: #e5e7eb;
+  line-height: 1.6;
 }
 
-.hero-btn {
-  margin-top: 32px;
+.hero-lead span{
+  color: #f5b300;
+  font-weight: 600;
+}
+
+.hero-subtext {
+  margin-top: 14px;
+  font-size: 16.5px;
+  color: #b5b9c6;
+  line-height: 1.7;
+}
+
+/* HIGHLIGHTS */
+.hero-highlights {
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.hero-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+.hero-highlights svg {
+  font-size: 28px;
+  color: #3676c5; /* subtle professional blue */
+  flex-shrink: 0;
+}
+
+
+/* ACTIONS */
+.hero-actions {
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hero-btn.primary {
+  width: fit-content;
   background: linear-gradient(135deg, #2f80ff, #2563eb);
   border: none;
   color: #fff;
-  padding: 20px 22px;
-  border-radius: 10px;
+  padding: 18px 24px;
+  border-radius: 12px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 17px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  transition: all 0.3s ease;
 }
 
-.hero-btn:hover {
+.hero-btn.primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(37,99,235,0.45);
+  box-shadow: 0 12px 28px rgba(37,99,235,0.45);
+}
+
+.hero-tagline {
+  font-size: 15px;
+  color: #9ca3af;
 }
 
 /* VIDEO */
 .hero-media {
   width: 100%;
-  height: 420px;
+  height: 440px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 22px;
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.6),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
 }
 
 /* TRUST TEXT */
 .trust-text {
-  margin: 40px 0 30px;
+  margin: 44px 0 34px;
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   color: #eaeaea;
 }
@@ -93,7 +170,7 @@
 /* LOGO SLIDER */
 .logo-slider {
   overflow: hidden;
-  padding-bottom: 40px;
+  padding-bottom: 48px;
 }
 
 .logo-track {
@@ -103,11 +180,12 @@
 }
 
 .logo-track img {
-  height: 80px;
+  height: 78px;
   margin: 0 22px;
   padding: 10px 18px;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 @keyframes scroll {
@@ -119,52 +197,55 @@
   }
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
 
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 60px 6%;
+    gap: 44px;
+    padding: 70px 6% 60px;
     text-align: center;
+  }
+
+  .hero-left {
+    max-width: 100%;
   }
 
   .hero-left h1 {
     font-size: 36px;
-    line-height: 1.25;
   }
 
-  .hero-left p {
-    font-size: 16px;
-    margin-left: auto;
-    margin-right: auto;
+  .hero-lead {
+    font-size: 18px;
   }
 
-  .hero-btn {
-    margin-top: 28px;
-    padding: 16px 20px;
-    font-size: 16px;
-    justify-content: center;
+  .hero-subtext {
+    font-size: 15.5px;
+  }
+
+  .hero-highlights li {
+    font-size: 14.5px;
+  }
+
+  .hero-btn.primary {
+    margin: 0 auto;
   }
 
   .hero-media {
-    height: 240px;
-    border-radius: 16px;
+    height: 260px;
+    border-radius: 18px;
   }
 
   .trust-text {
-    font-size: 18px;
-    margin: 30px 0 24px;
+    font-size: 17px;
     padding: 0 6%;
   }
 
   .logo-track img {
     height: 56px;
     margin: 0 14px;
-    padding: 8px 12px;
   }
 }
-
-
 
 @media (max-width: 480px) {
 
@@ -172,12 +253,8 @@
     font-size: 30px;
   }
 
-  .hero-left p {
-    font-size: 15px;
-  }
-
   .hero-media {
-    height: 200px;
+    height: 220px;
   }
 
   .logo-track img {
@@ -185,4 +262,3 @@
     margin: 0 10px;
   }
 }
-
