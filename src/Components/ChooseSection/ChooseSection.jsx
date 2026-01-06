@@ -8,7 +8,7 @@ import lab3 from "../../assets/labs/lab3.jpeg";
 import card2 from "../../assets/card-2.avif";
 import service1 from "../../assets/students/student6.jpeg"
 import service2 from "../../assets/students/student3.jpeg"
-import service3 from "../../assets/services-3.avif"
+import service3 from "../../assets/students/student10.jpeg"
 /* ICONS */
 import { HiOutlineBookOpen } from "react-icons/hi";
 import { HiOutlineDocumentText } from "react-icons/hi";
