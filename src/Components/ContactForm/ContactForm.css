@@ -194,3 +194,148 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ===============================
+   TABLET (<= 768px)
+================================ */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 80px 0;
+  }
+
+  .contact-container {
+    gap: 32px;
+  }
+
+  .contact-form-card {
+    padding: 32px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .form-group.full {
+    margin-top: 12px;
+  }
+
+  .submit-btn {
+    padding: 16px;
+    font-size: 15px;
+  }
+
+  .info-card,
+  .response-card {
+    padding: 26px;
+  }
+
+  .response-time span {
+    font-size: 28px;
+  }
+}
+
+/* ===============================
+   MOBILE (<= 480px)
+================================ */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 64px 0;
+  }
+
+  .contact-container {
+    padding: 0 6%;
+    gap: 28px;
+  }
+
+  .contact-form-card {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 14px;
+    padding: 13px 14px;
+    border-radius: 8px;
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+
+  .submit-btn {
+    margin-top: 24px;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  /* RIGHT INFO STACK */
+  .contact-info {
+    gap: 20px;
+  }
+
+  .info-card {
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  .info-card h3 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  .info-item {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .info-item .icon {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+
+  .info-item p {
+    font-size: 13px;
+  }
+
+  .info-item span {
+    font-size: 14px;
+  }
+
+  /* RESPONSE CARD */
+  .response-card {
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  .response-card h4 {
+    font-size: 18px;
+  }
+
+  .response-card p {
+    font-size: 13px;
+  }
+
+  .response-time {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .response-time span {
+    font-size: 26px;
+  }
+
+  .response-time small {
+    font-size: 12px;
+  }
+}
