@@ -70,7 +70,7 @@ const ContactForm = () => {
               <span className="icon"><FiPhone /></span>
               <div>
                 <p>Call Us</p>
-                <span>+91 9XXXX XXXXX</span>
+                <span>+91 9999204834</span>
               </div>
             </div>
 
@@ -78,8 +78,7 @@ const ContactForm = () => {
               <span className="icon"><FiMail /></span>
               <div>
                 <p>Email Us</p>
-                <span>info@aivenger.in</span>
-                <span>support@aivenger.in</span>
+                <span>info@aivengers.co.in</span>
               </div>
             </div>
 
