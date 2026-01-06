@@ -2,12 +2,12 @@ import React from "react";
 import "./ChooseSection.css";
 
 /* LAB IMAGES */
-import lab1 from "../../assets/labs/lab1.avif";
-import lab2 from "../../assets/labs/lab2.avif";
-import lab3 from "../../assets/labs/lab3.avif";
+import lab1 from "../../assets/labs/robotics.png";
+import lab2 from "../../assets/labs/drone.png";
+import lab3 from "../../assets/labs/lab3.jpeg";
 import card2 from "../../assets/card-2.avif";
-import service1 from "../../assets/services-1.avif"
-import service2 from "../../assets/services-2.avif"
+import service1 from "../../assets/students/student6.jpeg"
+import service2 from "../../assets/students/student3.jpeg"
 import service3 from "../../assets/services-3.avif"
 /* ICONS */
 import { HiOutlineBookOpen } from "react-icons/hi";
@@ -23,13 +23,13 @@ const ChooseSection = () => {
         <span className="choose-pill">WHY CHOOSE US?</span>
 
         <h2>
-          The one-stop-solution to STEM <br /> Education
+          Not just a Lab. Not just a Course. A Complete Skill Ecosystem.
         </h2>
 
         <p>
-          We offer end-to-end solutions for schools with Skill Labs,
-          CBSE-aligned curriculums, instructor support, and immersive
-          learning experiences.
+          AIVenger is a composite skill lab designed to create
+          confident innovators, problem-solvers, and future founders
+          through hands-on STEM, AI tools, and personality development.
         </p>
       </div>
 
@@ -54,9 +54,9 @@ const ChooseSection = () => {
 
               <div className="lab-card">
                 <img src={lab2} alt="AR VR Lab" />
-                <h4>AR/VR Lab</h4>
+                <h4>AI/Drone Lab</h4>
                 <p>
-                  AR/VR Lab creates immersive learning, innovation,
+                  AI/Drone Lab creates immersive learning, innovation,
                   simulation, and virtual experiences.
                 </p>
                 <button>Know More ↗</button>

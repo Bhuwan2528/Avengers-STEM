@@ -5,9 +5,11 @@ import "./Competition.css";
 import heroVideo from "../../assets/robotics-lab.webm";
 
 /* IMAGES */
-import img1 from "../../assets/competition1.avif";
-import img2 from "../../assets/competition2.avif";
-import img3 from "../../assets/competition3.avif";
+import img1 from "../../assets/students/student5.jpeg";
+import img2 from "../../assets/students/student7.jpeg";
+import img3 from "../../assets/students/student8.jpeg";
+import img4 from "../../assets/students/student9.jpeg";
+import img5 from "../../assets/students/student4.jpeg";
 
 const Competition = () => {
   return (
@@ -63,10 +65,10 @@ const Competition = () => {
 
           {/* repeated cropped */}
           <div className="gallery-item cropped">
-            <img src={img1} alt="" />
+            <img src={img4} alt="" />
           </div>
           <div className="gallery-item cropped">
-            <img src={img2} alt="" />
+            <img src={img5} alt="" />
           </div>
         </div>
       </section>

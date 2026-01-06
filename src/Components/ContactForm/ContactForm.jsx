@@ -87,8 +87,7 @@ const ContactForm = () => {
               <div>
                 <p>Visit Us</p>
                 <span>
-                  AIVenger Technologies Pvt. Ltd.<br />
-                  Bangalore, Karnataka, India
+                  E cell IIT Gawhati, Bangalore office, Gurgaon office, Jaipur office.
                 </span>
               </div>
             </div>

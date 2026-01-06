@@ -1,9 +1,10 @@
 import React from "react";
 import "./SampleDesign.css";
 
-import designImg1 from "../../assets/labs/lab1.avif"; // replace
-import designImg2 from "../../assets/labs/lab2.avif"; // replace
-import designImg3 from "../../assets/labs/lab3.avif"; // replace
+import designImg1 from "../../assets/labs/robotics.png"; // replace
+import designImg2 from "../../assets/labs/drone.png"; // replace
+import designImg3 from "../../assets/labs/lab3.jpeg"; // replace
+
 
 const SampleDesign = ({ value }) => {
   return (

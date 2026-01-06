@@ -1,9 +1,9 @@
 import React from "react";
 import "./OurLabs.css";
 
-import labImg1 from "../../assets/lab1.avif"; // replace
-import labImg2 from "../../assets/lab2.avif"; // replace
-import labImg3 from "../../assets/lab3.avif"; // replace
+import labImg1 from "../../assets/students/student4.jpeg"; // replace
+import labImg2 from "../../assets/students/student2.jpeg"; // replace
+import labImg3 from "../../assets/students/student3.jpeg"; // replace
 
 const OurLabs = () => {
   return (

@@ -13,9 +13,7 @@ const Footer = () => {
         <div className="footer-brand">
           <div className="footer-logo"><img src={logo} alt="" /></div>
           <p>
-            Inspiring the next generation of tech leaders. We offer
-            engaging, hands-on learning in AI, Coding, and Robotics.
-            Founded by IIT Delhi alumni and professors in 2019.
+            Building the next generation of innovators through hands-on AI, Robotics, and Drone education. Empowering students aged 3-18 accross India.
           </p>
         </div>
 
@@ -23,7 +21,7 @@ const Footer = () => {
         <div className="footer-col">
           <h4>About</h4>
           <ul>
-            <li>Rancholabs</li>
+            <li>AIvengers</li>
             <li>Makerspace</li>
             <li>LMS</li>
             <li>Competitions</li>
@@ -36,6 +34,9 @@ const Footer = () => {
           <h4>Company</h4>
           <ul>
             <li>Contact</li>
+            <li><strong>Mobile</strong> : 9999204834</li>
+            <li><strong>Email</strong> : info@aivengers.co.in</li>
+            <li><strong>Website</strong> : ainvengers.co.in</li>
           </ul>
         </div>
 

@@ -1,0 +1,112 @@
+/* PAGE BACKGROUND */
+.admin-hero-page {
+  min-height: 100vh;
+  background: #f4f6fb;
+  padding: 60px 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* CARD */
+.admin-hero-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* HEADER */
+.admin-hero-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.admin-hero-header p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* FORM GRID */
+.admin-hero-form {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* FULL WIDTH */
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+/* LABEL */
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* INPUTS */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  color: #111827;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+/* FOCUS */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* BUTTON */
+.form-actions {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+}
+
+.form-actions button {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border: none;
+  padding: 16px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-actions button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 35px rgba(37, 99, 235, 0.35);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .admin-hero-card {
+    padding: 28px 22px;
+  }
+
+  .admin-hero-form {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}

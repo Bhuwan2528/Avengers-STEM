@@ -10,6 +10,8 @@ import ILMS from "./Pages/ILMS/ILMS"
 import Competition from './Pages/Competition/Competition'
 import Contact from './Pages/Contact/Contact'
 
+import AdminHero from "./Admin/Home/AdminHero/AdminHero"
+
 const App = () => {
   return (
     <div>
@@ -22,6 +24,9 @@ const App = () => {
         <Route path="/ilms" element={<ILMS/>} />
         <Route path="/competition-and-exhibition" element={<Competition/>} />
         <Route path="/contact" element={<Contact/>} />
+
+
+        <Route path='/admin-hero' element= {<AdminHero/>} />
         
       </Routes>
         <Footer/>

@@ -2,8 +2,8 @@ import React from "react";
 import "./CaseStudies.css";
 
 /* IMAGES (replace later) */
-import case1 from "../../assets/case1.avif";
-import case2 from "../../assets/case2.avif";
+import case1 from "../../assets/students/student5.jpeg";
+import case2 from "../../assets/students/student1.jpeg";
 
 const CaseStudies = () => {
   return (
@@ -29,10 +29,10 @@ const CaseStudies = () => {
           <div className="case-card">
             <img src={case1} alt="GD Goenka School" />
 
-            <h3>GD Goenka School's Success Story</h3>
+            <h3>RPS Inernational School's Success Story</h3>
 
             <p>
-              As a premier educational institution, GD Goenka School
+              As a premier educational institution, RPS International School
               recognized the growing importance of STEM education.
               The collaboration with Rancho Labs began with a clear
               understanding...
@@ -45,12 +45,12 @@ const CaseStudies = () => {
 
           {/* CARD 2 */}
           <div className="case-card">
-            <img src={case2} alt="SAJS School" />
+            <img src={case2} alt="ZAD Global School School" />
 
-            <h3>SAJS's improved Admission Rates</h3>
+            <h3>ZAD Global School's improved Admission Rates</h3>
 
             <p>
-              As a premier educational institution, SAJS recognized
+              As a premier educational institution, ZAD Global School recognized
               the importance of STEM education and partnered with
               Rancho Labs to integrate innovative programs...
             </p>
