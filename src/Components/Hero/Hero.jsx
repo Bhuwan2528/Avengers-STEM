@@ -15,7 +15,7 @@ import school4 from "../../assets/schools/school1.avif";
 import school5 from "../../assets/schools/school2.avif";
 import school6 from "../../assets/schools/school1.avif";
 
-const Hero = ({ heroData }) => {
+const Hero = () => {
   return (
     <section className="hero">
 

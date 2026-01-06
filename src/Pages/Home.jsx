@@ -9,28 +9,15 @@ import Footer from "../Components/Footer/Footer"
 import ContactForm from '../Components/ContactForm/ContactForm'
 
 const Home = () => {
-  const [homeData, setHomeData] = useState(null);
-  const API_URL = import.meta.env.VITE_API_URL;
-
-  useEffect(() => {
-    fetch(`${API_URL}/api/home`)
-      .then((res) => res.json())
-      .then((data) => setHomeData(data))
-      .catch((err) => console.log(err));
-  }, []);
-
-  if (!homeData) {
-    return <p></p>;
-  }
 
   return (
     <div>
-      <Hero heroData={homeData.hero} />
-      <ImpactSection impactData={homeData.impact} />
-      <ChooseSection chooseData={homeData.choose} />
-      <CaseStudies caseData={homeData.cases} />
-      <Testimonials testimonialData={homeData.testimonials} />
-      <ContactForm contactData={homeData.contact} />
+      <Hero />
+      <ImpactSection />
+      <ChooseSection />
+      <CaseStudies  />
+      <Testimonials  />
+      <ContactForm />
     </div>
   )
 }
