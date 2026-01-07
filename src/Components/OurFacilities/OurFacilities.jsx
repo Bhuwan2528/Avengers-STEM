@@ -6,7 +6,7 @@ import imgDrone from "../../assets/facilities/drone.png";
 import imgIot from "../../assets/facilities/iot.png";
 import imgMechanical from "../../assets/mechanical.avif";
 import imgTools from "../../assets/facilities/tools.webp";
-import imgSoldering from "../../assets/facilities/soldering.png";
+import imgSoldering from "../../assets/facilities/soldering.jpeg";
 
 const OurFacilities = () => {
   return (

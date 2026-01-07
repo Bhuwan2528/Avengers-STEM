@@ -168,6 +168,7 @@
 }
 
 /* LOGO SLIDER */
+/* LOGO SLIDER */
 .logo-slider {
   overflow: hidden;
   padding-bottom: 48px;
@@ -176,18 +177,32 @@
 .logo-track {
   display: flex;
   width: max-content;
-  animation: scroll 28s linear infinite;
+  animation: scroll 32s linear infinite;
 }
 
-.logo-track img {
-  height: 78px;
-  margin: 0 22px;
-  padding: 10px 18px;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+/* LOGO CARD */
+.logo-card {
+  min-width: 160px;
+  height: 90px;
+  margin: 0 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.18);
 }
 
+/* IMAGE FIX */
+.logo-card img {
+  max-width: 100%;
+  max-height: 110%;
+  object-fit: contain; /* MOST IMPORTANT */
+  filter: contrast(1.05) saturate(1.05);
+}
+
+/* SMOOTH SCROLL */
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -196,6 +211,7 @@
     transform: translateX(-50%);
   }
 }
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -245,6 +261,11 @@
     height: 56px;
     margin: 0 14px;
   }
+    .logo-card {
+    min-width: 130px;
+    height: 70px;
+    margin: 0 14px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -259,6 +280,12 @@
 
   .logo-track img {
     height: 48px;
+    margin: 0 10px;
+  }
+
+    .logo-card {
+    min-width: 110px;
+    height: 60px;
     margin: 0 10px;
   }
 }

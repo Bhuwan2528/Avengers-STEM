@@ -18,7 +18,7 @@ const ARVRLab = () => {
         <div className="arvr-hero-bg" />
         <div className="arvr-hero-overlay" />
         <div className="arvr-hero-content">
-          <span className="arvr-hero-pill">AR / VR LABS</span>
+          <span className="arvr-hero-pill">AI / Drone LABS</span>
           <h1 className="arvr-hero-title">Craft your own Reality</h1>
           <p className="arvr-hero-desc">
             Augmented and Virtual Reality are revolutionizing modern industries and  technologies poised to reshape the world.
@@ -36,7 +36,7 @@ const ARVRLab = () => {
           </p>
 
           <h2 className="robotics-stem-title">
-            We design custom AR/VR Labs for your schools.
+            We design custom AI & Drone Labs for your schools.
           </h2>
         </div>
       </section>
@@ -53,9 +53,9 @@ const ARVRLab = () => {
         />
       </section>
 
-      <WhyCourse value={"Ar Vr Labs"}/>
-      <OurLabs value={"Ar Vr"}/>
-      <SampleDesign value={"Ar Vr"}/>
+      <WhyCourse value={"AI & Drone Labs"}/>
+      <OurLabs value={"AI & Drone"}/>
+      <SampleDesign value={"AI & Drone"}/>
       <Pedagogy/>
     <OurFacilities/>
     <Curriculum/>

@@ -321,7 +321,7 @@ const Competition = () => {
         </svg>
       </div>
       <p>
-        Hosting exhibitions across diverse fields like AR/VR, Robotics, AI,
+        Hosting exhibitions across diverse fields like AI & Drone, Robotics, AI,
         and Coding etc.
       </p>
     </div>

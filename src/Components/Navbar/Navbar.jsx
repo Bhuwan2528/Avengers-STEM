@@ -36,7 +36,7 @@ const Navbar = () => {
             <span>Labs</span>
             <div className="dropdown">
               <a onClick={() => handleNav("/robotics-lab")}>Robotics Lab</a>
-              <a onClick={() => handleNav("/ar-vr-lab")}>AR / VR Lab</a>
+              <a onClick={() => handleNav("/ar-vr-lab")}>AI / Drone Lab</a>
               <a onClick={() => handleNav("/composite-lab")}>Composite Lab</a>
             </div>
           </div>
@@ -86,7 +86,7 @@ const Navbar = () => {
             </div>
             <div className="sidebar-accordion-content">
               <a onClick={() => handleNav("/robotics-lab")}>Robotics Lab</a>
-              <a onClick={() => handleNav("/ar-vr-lab")}>AR / VR Lab</a>
+              <a onClick={() => handleNav("/ar-vr-lab")}>AI / Drone Lab</a>
               <a onClick={() => handleNav("/composite-lab")}>Composite Lab</a>
             </div>
           </div>

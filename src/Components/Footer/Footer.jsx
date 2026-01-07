@@ -22,10 +22,9 @@ const Footer = () => {
           <h4>About</h4>
           <ul>
             <li>AIvengers</li>
-            <li>Makerspace</li>
             <li>LMS</li>
             <li>Competitions</li>
-            <li>AR/VR</li>
+            <li>AI & Drone</li>
           </ul>
         </div>
 
@@ -53,7 +52,7 @@ const Footer = () => {
 
       {/* BOTTOM BAR */}
       <div className="footer-bottom">
-        <span>Copyright RanchoLabs. All right reserved.</span>
+        <span>Copyright AIvengers. All right reserved.</span>
 
         <div className="footer-socials">
           <a href="#"><FiInstagram /> Instagram</a>

@@ -53,7 +53,7 @@ const ChooseSection = () => {
               </div>
 
               <div className="lab-card">
-                <img src={lab2} alt="AR VR Lab" />
+                <img src={lab2} alt="AI & Drone Lab" />
                 <h4>AI/Drone Lab</h4>
                 <p>
                   AI/Drone Lab creates immersive learning, innovation,

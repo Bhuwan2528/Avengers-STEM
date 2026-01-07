@@ -19,10 +19,34 @@ const ImpactSection = () => {
         <h4 className="partners-title">Our Proud Partners</h4>
 
         <div className="partners-logos">
-          <img src="https://www.iitg.ac.in/img/iitgfooter.png" alt="Partner" />
-          <img src="https://cmsredesign.channeli.in/library/assets/images/IITR175.png" alt="Partner" />
-          <img src="https://www.iitb.ac.in/themes/custom/iitb_bootstrap/logo.png" alt="Partner" />
+
+          {/* IIT Guwahati */}
+          <div className="partner-item">
+            <img
+              src="https://www.iitg.ac.in/img/iitgfooter.png"
+              alt="IIT Guwahati"
+            />
+            <span>IIT Guwahati</span>
+          </div>
+
+          {/* IIT Roorkee (logo only) */}
+          <img
+            className="partner-logo"
+            src="https://cmsredesign.channeli.in/library/assets/images/IITR175.png"
+            alt="IIT Roorkee"
+          />
+
+          {/* IIT Bombay */}
+          <div className="partner-item">
+            <img
+              src="https://www.iitb.ac.in/themes/custom/iitb_bootstrap/logo.png"
+              alt="IIT Bombay"
+            />
+            <span>IIT Bombay</span>
+          </div>
+
         </div>
+
 
         {/* IMPACT TITLE */}
         <h2 className="impact-title">Our Impact</h2>

@@ -41,7 +41,7 @@ const ContactForm = () => {
             <div className="form-group full">
               <label>I'm Interested In *</label>
               <select>
-                <option>Select an option</option>
+                <option className="option1">Select an option</option>
                 <option>AI Lab Setup</option>
                 <option>Robotics Lab Setup</option>
                 <option>STEM Programs</option>

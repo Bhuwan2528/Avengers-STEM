@@ -8,12 +8,23 @@ import { MdOutlineVerified } from "react-icons/md";
 import heroVideo from "../../assets/robotics-lab.webm";
 
 // School logos
-import school1 from "../../assets/schools/school1.avif";
-import school2 from "../../assets/schools/school1.avif";
-import school3 from "../../assets/schools/school2.avif";
-import school4 from "../../assets/schools/school1.avif";
-import school5 from "../../assets/schools/school2.avif";
-import school6 from "../../assets/schools/school1.avif";
+// import school1 from "../../assets/schools/school1.avif";
+// import school2 from "../../assets/schools/school1.avif";
+// import school3 from "../../assets/schools/school2.avif";
+// import school4 from "../../assets/schools/school1.avif";
+// import school5 from "../../assets/schools/school2.avif";
+// import school6 from "../../assets/schools/school1.avif";
+
+  const schoolImages = import.meta.glob(
+    "../../assets/schools/*.{jpg,jpeg,png,}",
+    { eager: true }
+  );
+
+  const schoolLogos = Object.values(schoolImages).map(
+    (img) => img.default
+  );
+
+
 
 const Hero = () => {
   return (
@@ -94,16 +105,16 @@ const Hero = () => {
       </div>
 
       {/* LOGO SLIDER */}
-      <div className="logo-slider">
-        <div className="logo-track">
-          {[
-            school1, school2, school3, school4, school5, school6,
-            school1, school2, school3, school4, school5, school6
-          ].map((logo, index) => (
-            <img src={logo} key={index} alt="School logo" />
-          ))}
-        </div>
+
+<div className="logo-slider">
+  <div className="logo-track">
+    {[...schoolLogos, ...schoolLogos].map((logo, index) => (
+      <div className="logo-card" key={index}>
+        <img src={logo} alt="School logo" />
       </div>
+    ))}
+  </div>
+</div>
 
     </section>
   );

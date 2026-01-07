@@ -9,7 +9,7 @@ const QuestionsCTA = () => {
 
       <div className="questions-actions">
         <a href="#" className="cta-btn primary">
-          Checkout our AR/VR Lab
+          Checkout our AI/VR Lab
           <FiArrowUpRight />
         </a>
 
