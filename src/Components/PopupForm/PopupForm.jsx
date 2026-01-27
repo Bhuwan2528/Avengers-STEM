@@ -46,7 +46,7 @@ const PopupForm = ({ closePopup }) => {
       <div className="popup-box">
         <button className="close-btn" onClick={closePopup}>×</button>
 
-        <h2>Request a Callback</h2>
+        <h2 style={{color: "black"}}>Request a Callback</h2>
         <p>Fill the form and we’ll contact you shortly</p>
 
         <form onSubmit={handleSubmit}>

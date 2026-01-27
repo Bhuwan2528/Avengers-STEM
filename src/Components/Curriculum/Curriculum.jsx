@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Curriculum.css";
 import { FaCheck } from "react-icons/fa";
+import PopupForm from "../PopupForm/PopupForm";
 
 const Curriculum = () => {
+  const [showPopup, setShowPopup] = useState(false);
   return (
+    
     <section className="curriculum">
       <h2 className="curriculum-title">
         Robotics & Coding Curriculum
@@ -72,10 +75,19 @@ const Curriculum = () => {
         </div>
       </div>
       <div className="curriculum-btn meeting-btn-wrap">
-        <button className="meeting-btn">
+        <button  onClick={() => setShowPopup(true)} className="meeting-btn">
             Book a Meeting with us
             <span className="meeting-arrow">↗</span>
         </button>
+        {showPopup && (
+          <div className="popup-overlay">
+            <PopupForm />
+          </div>
+        )}
+        {showPopup && (
+        <PopupForm closePopup={() => setShowPopup(false)} />
+      )}
+
       </div>
     </section>
   );
