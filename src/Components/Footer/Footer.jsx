@@ -2,8 +2,10 @@ import React from "react";
 import "./Footer.css";
 import { FiInstagram, FiYoutube } from "react-icons/fi";
 import logo from "../../assets/logo.png"
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="footer">
 
@@ -21,10 +23,10 @@ const Footer = () => {
         <div className="footer-col">
           <h4>About</h4>
           <ul>
-            <li>AIvengers</li>
-            <li>LMS</li>
-            <li>Competitions</li>
-            <li>AI & Drone</li>
+            <li onClick={()=> navigate('/')}>AIvengers</li>
+            <li onClick={()=> navigate('/ilms')}>LMS</li>
+            <li onClick={()=> navigate('/competition-and-exhibition')}>Competitions</li>
+            <li onClick={()=> navigate('/ai-drone-lab')}>AI & Drone</li>
           </ul>
         </div>
 
@@ -32,7 +34,7 @@ const Footer = () => {
         <div className="footer-col">
           <h4>Company</h4>
           <ul>
-            <li>Contact</li>
+            <li onClick={()=> navigate('/contact')}>Contact</li>
             <li><strong>Mobile</strong> : 9999204834</li>
             <li><strong>Email</strong> : info@aivengers.co.in</li>
             <li><strong>Website</strong> : ainvengers.co.in</li>

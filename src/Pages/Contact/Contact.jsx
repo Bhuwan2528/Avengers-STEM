@@ -1,9 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import "./contact.css";
 import { HiOutlineOfficeBuilding, HiOutlineMail } from "react-icons/hi";
 import { FiPhone } from "react-icons/fi";
 
 const Contact = () => {
+  
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    designation: "",
+    schoolName: "",
+    city: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_0kz0gv1",     // ✅ Service ID
+        "template_8vpq5bf",    // ✅ Common Template
+        {
+          ...formData,
+          source: "Contact Section Form",
+          time: new Date().toLocaleString(),
+        },
+        "-z97sqCiHxzig4fGk"    // ✅ Public Key
+      )
+      .then(() => {
+        alert("Form submitted successfully");
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          designation: "",
+          schoolName: "",
+          city: "",
+        });
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("Failed to submit form");
+      });
+  };
+
   return (
     <>
     <section className="contact-section">
@@ -69,15 +115,60 @@ const Contact = () => {
         </div>
 
         {/* RIGHT */}
-        <form className="contact-form">
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Contact No." />
-          <input type="email" placeholder="Email" />
-          <select>
-            <option>Designation</option>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+
+          <input
+            type="text"
+            name="phone"
+            placeholder="Contact No."
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+
+          <select
+            name="designation"
+            value={formData.designation}
+            onChange={handleChange}
+          >
+            <option value="">Designation</option>
+            <option>Principal</option>
+            <option>Teacher</option>
+            <option>Coordinator</option>
+            <option>Director</option>
           </select>
-          <input type="text" placeholder="School Name" />
-          <input type="text" placeholder="City" />
+
+          <input
+            type="text"
+            name="schoolName"
+            placeholder="School Name"
+            value={formData.schoolName}
+            onChange={handleChange}
+          />
+
+          <input
+            type="text"
+            name="city"
+            placeholder="City"
+            value={formData.city}
+            onChange={handleChange}
+          />
 
           <button type="submit">
             Submit <span>↗</span>

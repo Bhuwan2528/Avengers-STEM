@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ContactForm.css";
+import emailjs from "emailjs-com";
 import {
   FiPhone,
   FiMail,
@@ -9,39 +10,117 @@ import {
 } from "react-icons/fi";
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    schoolName: "",
+    intrestedIn: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_0kz0gv1",     // ✅ Service ID
+        "template_8vpq5bf",    // ✅ Template ID
+        {
+          ...formData,
+          source: "Contact Page Form",
+          time: new Date().toLocaleString(),
+        },
+        "-z97sqCiHxzig4fGk"    // ✅ Public Key
+      )
+      .then(() => {
+        alert("Form submitted successfully");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          schoolName: "",
+          intrestedIn: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("Failed to submit form");
+      });
+  };
+
   return (
     <section className="contact-section">
       <div className="contact-container">
 
         {/* LEFT : FORM */}
         <div className="contact-form-card">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="form-grid">
+
               <div className="form-group">
                 <label>Full Name *</label>
-                <input type="text" placeholder="Enter your name" />
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Enter your name"
+                  required
+                />
               </div>
 
               <div className="form-group">
                 <label>Email Address *</label>
-                <input type="email" placeholder="your@email.com" />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="your@email.com"
+                  required
+                />
               </div>
 
               <div className="form-group">
                 <label>Phone Number *</label>
-                <input type="tel" placeholder="+91 98765 43210" />
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="+91 98765 43210"
+                  required
+                />
               </div>
 
               <div className="form-group">
                 <label>School / Organization</label>
-                <input type="text" placeholder="Your school name" />
+                <input
+                  type="text"
+                  name="schoolName"
+                  value={formData.schoolName}
+                  onChange={handleChange}
+                  placeholder="Your school name"
+                />
               </div>
+
             </div>
 
             <div className="form-group full">
               <label>I'm Interested In *</label>
-              <select>
-                <option className="option1">Select an option</option>
+              <select
+                name="intrestedIn"
+                value={formData.intrestedIn}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Select an option</option>
                 <option>AI Lab Setup</option>
                 <option>Robotics Lab Setup</option>
                 <option>STEM Programs</option>
@@ -51,16 +130,21 @@ const ContactForm = () => {
 
             <div className="form-group full">
               <label>Message</label>
-              <textarea placeholder="Tell us more about your requirements..." />
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Tell us more about your requirements..."
+              />
             </div>
 
-            <button className="submit-btn">
+            <button type="submit" className="submit-btn">
               Submit Request <FiSend />
             </button>
           </form>
         </div>
 
-        {/* RIGHT : INFO */}
+        {/* RIGHT : INFO (UNCHANGED) */}
         <div className="contact-info">
 
           <div className="info-card">

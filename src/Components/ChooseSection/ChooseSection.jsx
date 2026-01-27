@@ -14,7 +14,11 @@ import { HiOutlineBookOpen } from "react-icons/hi";
 import { HiOutlineDocumentText } from "react-icons/hi";
 import { HiOutlineCube } from "react-icons/hi";
 
+import brochure from "../../assets/aivenger-know-more.pdf"
+import { useNavigate } from "react-router-dom";
+
 const ChooseSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="choose-section">
 
@@ -49,7 +53,9 @@ const ChooseSection = () => {
                   Robotics Lab fosters innovation, coding, automation,
                   engineering, and hands-on learning.
                 </p>
-                <button>Know More ↗</button>
+                <a href={brochure} download>
+                  <button>Know More ↗</button>
+                </a>
               </div>
 
               <div className="lab-card">
@@ -59,7 +65,9 @@ const ChooseSection = () => {
                   AI/Drone Lab creates immersive learning, innovation,
                   simulation, and virtual experiences.
                 </p>
-                <button>Know More ↗</button>
+                <a href={brochure} download>
+                  <button>Know More ↗</button>
+                </a>
               </div>
 
               <div className="lab-card">
@@ -69,14 +77,16 @@ const ChooseSection = () => {
                   An advanced lab enabling innovation, AI, automation,
                   engineering, and experimentation.
                 </p>
-                <button>Know More ↗</button>
+                <a href={brochure} download>
+                  <button>Know More ↗</button>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
         {/* CARD 2 */}
-        <div className="stack-card card-2">
+        {/* <div className="stack-card card-2">
           <div className="stack-card-inner">
             <div className="card-2-content">
               <div className="card-2-media">
@@ -96,7 +106,7 @@ const ChooseSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* CARD 3 */}
             <div className="stack-card card-3">
@@ -111,7 +121,7 @@ const ChooseSection = () => {
                     <p>
                     Win various inter-school competitions with our support!
                     </p>
-                    <button>Know More ↗</button>
+                    <button onClick={()=> navigate("/contact")}>Contact Us ↗</button>
                 </div>
 
                 <div className="lab-card">
@@ -120,7 +130,7 @@ const ChooseSection = () => {
                     <p>
                     We offer comprehensive exhibition support for schools.
                     </p>
-                    <button>Know More ↗</button>
+                    <button onClick={()=> navigate("/contact")}>Contact Us ↗</button>
                 </div>
 
                 <div className="lab-card">
@@ -129,7 +139,7 @@ const ChooseSection = () => {
                     <p>
                     Expert instructors to enhance the learning experience.
                     </p>
-                    <button>Know More ↗</button>
+                    <button onClick={()=> navigate("/contact")}>Contact Us ↗</button>
                 </div>
 
                 </div>

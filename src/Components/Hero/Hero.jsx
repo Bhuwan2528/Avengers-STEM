@@ -26,7 +26,7 @@ import heroVideo from "../../assets/robotics-lab.webm";
 
 
 
-const Hero = () => {
+const Hero = ({ openPopup }) => {
   return (
     <section className="hero">
 
@@ -74,7 +74,7 @@ const Hero = () => {
 
 
           <div className="hero-actions">
-            <button className="hero-btn primary">
+            <button  onClick={openPopup} className="hero-btn primary">
               Book a Meeting <span>↗</span>
             </button>
 

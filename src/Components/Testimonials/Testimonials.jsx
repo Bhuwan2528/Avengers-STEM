@@ -5,7 +5,7 @@ import "./Testimonials.css";
 import person1 from "../../assets/person1.avif";
 import person2 from "../../assets/person2.avif";
 
-const Testimonials = () => {
+const Testimonials = ({openPopup}) => {
   return (
     <section className="testimonial-section">
 
@@ -54,7 +54,7 @@ const Testimonials = () => {
       </div>
 
       <div className="meeting-btn-wrap">
-        <button className="meeting-btn">
+        <button  onClick={openPopup}  className="meeting-btn">
             Book a Meeting with us
             <span className="meeting-arrow">↗</span>
         </button>

@@ -5,8 +5,10 @@ import "./ImpactSection.css";
 import partner1 from "../../assets/partners/partner1.png";
 import partner2 from "../../assets/partners/partner2.png";
 import partner3 from "../../assets/partners/partner3.png";
+import { useNavigate } from "react-router-dom";
 
 const ImpactSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="impact-section">
 
@@ -75,7 +77,7 @@ const ImpactSection = () => {
         </div>
 
         {/* CTA */}
-        <button className="impact-btn">
+        <button onClick={()=> navigate('/contact')} className="impact-btn">
           Learn More <span>↗</span>
         </button>
 
