@@ -16,6 +16,17 @@ import { HiOutlineCube } from "react-icons/hi";
 
 import brochure from "../../assets/aivenger-know-more.pdf"
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+
+const handleDownload = () => {
+  toast.success("File started downloading", {
+    duration: 2000,
+    style: {
+      background: "#dafbd9",
+      color: "#222",
+    },
+  });
+};
 
 const ChooseSection = () => {
   const navigate = useNavigate();
@@ -53,7 +64,7 @@ const ChooseSection = () => {
                   Robotics Lab fosters innovation, coding, automation,
                   engineering, and hands-on learning.
                 </p>
-                <a href={brochure} download>
+                <a href={brochure} download onClick={handleDownload}>
                   <button>Know More ↗</button>
                 </a>
               </div>
@@ -65,7 +76,7 @@ const ChooseSection = () => {
                   AI/Drone Lab creates immersive learning, innovation,
                   simulation, and virtual experiences.
                 </p>
-                <a href={brochure} download>
+                <a href={brochure} download onClick={handleDownload}>
                   <button>Know More ↗</button>
                 </a>
               </div>
@@ -77,7 +88,7 @@ const ChooseSection = () => {
                   An advanced lab enabling innovation, AI, automation,
                   engineering, and experimentation.
                 </p>
-                <a href={brochure} download>
+                <a href={brochure} download onClick={handleDownload}>
                   <button>Know More ↗</button>
                 </a>
               </div>

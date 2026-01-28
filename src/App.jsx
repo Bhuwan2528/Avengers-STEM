@@ -11,15 +11,18 @@ import Competition from './Pages/Competition/Competition'
 import Contact from './Pages/Contact/Contact'
 
 import AdminHero from "./Admin/Home/AdminHero/AdminHero"
+import { Toaster } from "react-hot-toast";
+
 
 const App = () => {
   return (
     <div>
+      <Toaster position="top-right" />
         <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/robotics-lab" element={<RoboticsLab/>} />
-        <Route path="/ai-drone-lab" element={<ARVRLab/>} />
+        <Route path="/ar-vr-lab" element={<ARVRLab/>} />
         <Route path="/composite-lab" element={<CompositeLab/>} />
         <Route path="/ilms" element={<ILMS/>} />
         <Route path="/competition-and-exhibition" element={<Competition/>} />
