@@ -108,7 +108,7 @@ const Contact = () => {
               <HiOutlineMail className="info-icon" />
               <div>
                 <h4>Email</h4>
-                <p>school@AIvengers.com</p>
+                <p>info@aivengers.co.in</p>
               </div>
             </div>
           </div>

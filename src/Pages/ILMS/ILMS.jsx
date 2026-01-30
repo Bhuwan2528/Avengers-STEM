@@ -6,6 +6,8 @@ import choose1 from '../../assets/choose-card1.avif'
 import choose2 from '../../assets/choose-card2.avif'
 import choose3 from '../../assets/choose-card3.avif'
 import choose4 from '../../assets/choose-card4.avif'
+import choose5 from '../../assets/products.jpeg'
+import choose6 from '../../assets/products-1.jpeg'
 
 const ILMS = () => {
   return (
@@ -112,7 +114,7 @@ const ILMS = () => {
   {/* SECONDARY CARDS (SAME SECTION) */}
   <div className="ilms-why-cards">
 
-    <div className="ilms-feature-card blue">
+    <div className="ilms-feature-card blue reverse">
       <div className="ilms-feature-text">
         <h3>
           Key Progress Insights <br />
@@ -129,7 +131,7 @@ const ILMS = () => {
       </div>
     </div>
 
-    <div className="ilms-feature-card green reverse">
+    <div className="ilms-feature-card green ">
       <div className="ilms-feature-text">
         <h3>
           Interactive & <br />
@@ -146,7 +148,7 @@ const ILMS = () => {
       </div>
     </div>
 
-    <div className="ilms-feature-card mint">
+    <div className="ilms-feature-card mint reverse">
       <div className="ilms-feature-text">
         <h3>
           Community that <br />
@@ -160,6 +162,21 @@ const ILMS = () => {
       </div>
       <div className="ilms-feature-image">
         <img src={choose4} alt="Student community" />
+      </div>
+    </div>
+
+    <div className="ilms-feature-card green ">
+      <div className="ilms-feature-text">
+        <h3>
+          Where Innovation<br />
+          <span>Meets Education</span>
+        </h3>
+        <p>
+          From AI and robotics kits to guided practical learning, we provide a complete STEM ecosystem that nurtures curiosity, problem-solving, and future-ready minds in a safe and structured environment.
+        </p>
+      </div>
+      <div className="ilms-feature-image">
+        <img src={choose5} alt="Interactive learning" />
       </div>
     </div>
 

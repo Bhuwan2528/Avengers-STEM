@@ -4,8 +4,10 @@ import "./CaseStudies.css";
 /* IMAGES (replace later) */
 import case1 from "../../assets/students/student5.jpeg";
 import case2 from "../../assets/students/student1.jpeg";
+import { useNavigate } from "react-router-dom";
 
 const CaseStudies = () => {
+  const navigate = useNavigate();
   return (
     <section className="case-section">
       <div className="case-container">
@@ -38,9 +40,11 @@ const CaseStudies = () => {
               understanding...
             </p>
 
+                        <a href="/contact">
             <button className="case-btn">
-              View Case Study <span>↗</span>
+              Know More <span>↗</span>
             </button>
+            </a>
           </div>
 
           {/* CARD 2 */}
@@ -55,9 +59,11 @@ const CaseStudies = () => {
               Rancho Labs to integrate innovative programs...
             </p>
 
+                        <a href="/contact">
             <button className="case-btn">
-              View Case Study <span>↗</span>
+              Know More <span>↗</span>
             </button>
+            </a>
           </div>
 
         </div>

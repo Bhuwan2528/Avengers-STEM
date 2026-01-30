@@ -57,8 +57,8 @@ const Footer = () => {
         <span>Copyright AIvengers. All right reserved.</span>
 
         <div className="footer-socials">
-          <a href="#"><FiInstagram /> Instagram</a>
-          <a href="#"><FiYoutube /> Youtube</a>
+          <a href="https://www.instagram.com/"><FiInstagram /> Instagram</a>
+          <a href="https://www.youtube.com/"><FiYoutube /> Youtube</a>
         </div>
       </div>
 
