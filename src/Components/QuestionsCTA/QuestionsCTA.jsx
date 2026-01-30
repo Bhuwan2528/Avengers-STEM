@@ -8,17 +8,17 @@ const QuestionsCTA = () => {
       <h2 className="questions-title">Still have questions?</h2>
 
       <div className="questions-actions">
-        <a href="#" className="cta-btn primary">
+        <a href="/contact" className="cta-btn primary">
           Checkout our AI/VR Lab
           <FiArrowUpRight />
         </a>
 
-        <a href="#" className="cta-btn secondary">
+        <a href="/contact" className="cta-btn secondary">
           Get Quotation for Robotics Lab
           <FiArrowUpRight />
         </a>
 
-        <a href="#" className="cta-btn dark">
+        <a href="/contact" className="cta-btn dark">
           Start building Robotics Lab with us
           <FiArrowUpRight />
         </a>

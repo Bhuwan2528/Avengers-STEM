@@ -271,10 +271,12 @@ const Competition = () => {
   </div>
 
   <div className="support-cta">
-    <button>
-      Want to compete? Join Us
-      <span>↗</span>
-    </button>
+    <a href="/contact">
+      <button>
+          Want to compete? Join Us
+          <span>↗</span>
+      </button>
+    </a>
   </div>
 </section>
 
